@@ -27,36 +27,49 @@
     "quote": "The love of Christ urges us on.",
     "quoteAuthor": "— Saint Vincent Pallotti"
   },
+  "charisma": {
+    "badge": "Our Charisma",
+    "title": "The Charisma of Saint Vincent Pallotti",
+    "image": "/images/charisma.jpg",
+    "paragraphs": [
+      "Throughout history, God has enriched men and women with the gifts of the Holy Spirit so that the saving mission of Christ might continue for the good of humanity and the building up of the Church.",
+      "Saint Vincent Pallotti (1795–1850) belongs to the number of those whom, during the first half of the 19th century, God enriched with his gifts and inspirations, so that they might come to the aid of the Church in the fulfillment of its mission.",
+      "Faced with the worsening problems of faith that the Church of his time had to confront, and faced with the multiplication of its tasks for the spread of the Gospel in mission lands, he realized the urgency of reviving faith and rekindling charity among Catholics, with the intention of bringing all people to the unity of faith in Christ.",
+      "To achieve this goal, he considered it indispensable to ensure the collaboration of all members of the Church, both clergy and laity, and to unite their efforts in order to promote its apostolic mission more effectively."
+    ]
+  },
+  "history": {
+    "badge": "Our History",
+    "title": "History of the Holy Family Province",
+    "chapters": [
+      {
+        "year": "1890",
+        "image": "/images/history1.jpg",
+        "text": "It all begins in 1890, when the Holy See asked the German Pallottines to take charge of the territory of Cameroon and appointed Fr. Heinrich Vieter as Apostolic Prefect. He, along with another German Pallottine, Fr. George Walter, and six Pallottine brothers, embarked from Hamburg for Cameroon, arriving on October 25, 1890. Despite the early hardships, they succeeded in laying the foundations of the first Cameroonian mission, which Fr. Heinrich Vieter would call Marienberg (Mount of Mary). On December 8, 1890, they celebrated Mass in the first hut they had just built, and Fr. Heinrich Vieter placed the Cameroon mission under the protection of the Virgin Mary, Queen of the Apostles."
+      },
+      {
+        "year": "1973",
+        "image": "/images/history2.jpg",
+        "text": "Fr. Alojzy Majewski, who worked as a missionary for four years in Cameroon, left Africa in 1907 and went to Poland to found the very first Pallottine community there, becoming the Founder of the Polish Pallottine Province of Christ the King. It was at the request of Bishop Jean-Baptiste Gahamanyi, the first Bishop of Butare, that the Pallottine Missionaries of the Polish Province of Christ the King arrived in the Great Lakes Region. The first group of 10 missionaries arrived in Rwanda on June 8, 1973. Upon their arrival, they took charge of parishes in the Diocese of Butare at Mugombwa, and later at Kansi and Gikongoro; in the Archdiocese of Kigali at Masaka, Gikondo and Kabuga; and in the Diocese of Kabgayi at Kinazi and Ruhango."
+      },
+      {
+        "year": "2015",
+        "image": "/images/history3.jpg",
+        "caption": "Mgr Henryk HOSER, one of the first Polish missionaries in Rwanda",
+        "text": "In June 1981, the Pallottines began their mission in Zaire (today the Democratic Republic of Congo), serving in the parishes of Rugari and Rutshuru in the Diocese of Goma. In 1986, the first Community was established in Brussels, Belgium. On May 3, 1988, the Delegation became the Holy Family Region, dependent on the Province of Christ the King. On December 27, 2015, this Region was canonically erected as a Province, according to SAC law numbers 89, 311 and 312 and Decision No. 8 of the 20th General Assembly. The Holy Family Province is the first in Africa. It has an international and intercultural character, being composed of 111 members from three countries: Poland, Rwanda and the Democratic Republic of Congo."
+      }
+    ]
+  },
   "direction": {
     "badge": "Provincial Administration",
     "title": "Provincial Government",
     "subtitle": "Holy Family Province · SAC",
     "members": [
-      {
-        "name": "Fr. Eugène NIYONZIMA",
-        "role": "Provincial Rector",
-        "image": "/images/eugene.jpg"
-      },
-      {
-        "name": "Fr. Jean Pierre NSABIMANA",
-        "role": "First Consultor",
-        "image": "/images/pierre.jpg"
-      },
-      {
-        "name": "Fr. Ildéphonse BIZIMUNGU",
-        "role": "Consultor",
-        "image": "/images/bizimungu.jpg"
-      },
-      {
-        "name": "Fr. Jean de Dieu KAMBALE MATHE",
-        "role": "Consultor",
-        "image": "/images/kambale.jpeg"
-      },
-      {
-        "name": "Fr. Simon SAFARI BURHUNGANE",
-        "role": "Consultor",
-        "image": "/images/simon.jpg"
-      }
+      { "name": "Fr. Eugène NIYONZIMA", "role": "Provincial Rector", "image": "/images/eugene.jpg" },
+      { "name": "Fr. Jean Pierre NSABIMANA", "role": "First Consultor", "image": "/images/pierre.jpg" },
+      { "name": "Fr. Ildéphonse BIZIMUNGU", "role": "Consultor", "image": "/images/bizimungu.jpg" },
+      { "name": "Fr. Jean de Dieu KAMBALE MATHE", "role": "Consultor", "image": "/images/kambale.jpeg" },
+      { "name": "Fr. Simon SAFARI BURHUNGANE", "role": "Consultor", "image": "/images/simon.jpg" }
     ]
   },
   "communities": {
@@ -89,27 +102,9 @@
     "title": "Latest News & Updates",
     "readMore": "Read More",
     "articles": [
-      {
-        "id": 1,
-        "title": "Community Gathers for Annual Celebration",
-        "date": "June 15, 2024",
-        "summary": "A wonderful day of fellowship and prayer as our communities came together to celebrate our shared mission and values.",
-        "imageUrl": "/images/p2.jpg"
-      },
-      {
-        "id": 2,
-        "title": "New Youth Outreach Program Launched",
-        "date": "May 28, 2024",
-        "summary": "We are excited to announce a new program aimed at engaging young people in spiritual growth and community service.",
-        "imageUrl": "/images/p5.jpg"
-      },
-      {
-        "id": 3,
-        "title": "A Message from the Provincial Direction",
-        "date": "May 10, 2024",
-        "summary": "Reflections on the past year and our vision for the future, encouraging all to embrace the spirit of charity and collaboration.",
-        "imageUrl": "/images/p6.jpg"
-      }
+      { "id": 1, "title": "Community Gathers for Annual Celebration", "date": "June 15, 2024", "summary": "A wonderful day of fellowship and prayer as our communities came together to celebrate our shared mission and values.", "imageUrl": "/images/p2.jpg" },
+      { "id": 2, "title": "New Youth Outreach Program Launched", "date": "May 28, 2024", "summary": "We are excited to announce a new program aimed at engaging young people in spiritual growth and community service.", "imageUrl": "/images/p5.jpg" },
+      { "id": 3, "title": "A Message from the Provincial Direction", "date": "May 10, 2024", "summary": "Reflections on the past year and our vision for the future, encouraging all to embrace the spirit of charity and collaboration.", "imageUrl": "/images/p6.jpg" }
     ]
   },
   "galleries": {

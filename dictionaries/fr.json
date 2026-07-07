@@ -27,36 +27,49 @@
     "quote": "L'amour du Christ nous presse.",
     "quoteAuthor": "— Saint Vincent Pallotti"
   },
+  "charisma": {
+    "badge": "Notre Charisme",
+    "title": "Le Charisme de Saint Vincent Pallotti",
+    "image": "/images/charisma.jpg",
+    "paragraphs": [
+      "De tous temps Dieu enrichit des hommes et des femmes des dons du Saint Esprit afin que se continue la mission de salut du Christ pour le bien des hommes et l'édification de l'Eglise.",
+      "Saint Vincent Pallotti (1795-1850) appartient au nombre de ceux que, au cours de la première moitié du XIXe siècle, Dieu enrichit de ses dons et de ses inspirations, pour qu'ils viennent en aide à l'Eglise dans l'accomplissement de sa mission.",
+      "Face à l'aggravation des problèmes relatifs à la foi que, de son temps, l'Eglise devait affronter, et face à la multiplication de ses tâches pour la diffusion de l'Evangile dans les terres de mission, il se rendit compte de l'urgence de raviver la foi et de rallumer la charité parmi les catholiques dans l'intention d'amener tous les hommes à l'unité de la foi dans le Christ.",
+      "Pour atteindre ce but il considéra comme indispensable d'assurer la collaboration de tous les membres de l'Eglise, aussi bien du clergé que du laïcat, et d'unir leurs efforts en vue de promouvoir plus efficacement sa mission apostolique."
+    ]
+  },
+  "history": {
+    "badge": "Notre Histoire",
+    "title": "Histoire de la Province Sainte Famille",
+    "chapters": [
+      {
+        "year": "1890",
+        "image": "/images/history1.jpg",
+        "text": "Tout commence en 1890, quand le Saint-Siège demande aux Pallottins allemands de prendre en charge le territoire du Cameroun et nomme le Père Heinrich Vieter, Préfet Apostolique. Ce dernier avec un autre pallottin allemand, le Père George Walter et six frères pallottins s'embarquent à Hambourg pour le Cameroun et ils y arrivent le 25 octobre 1890. Malgré les vents et marins du début, ils réussirent à jeter les bases de la première mission camerounaise, que le Père Heinrich Vieter appellera Marienberg (Mont de Marie). Le 08 décembre 1890, ils célèbrent la messe dans la première case qu'ils venaient de construire, et le Père Heinrich Vieter met la mission du Cameroun sous la Protection de la Vierge Marie, Reine des Apôtres."
+      },
+      {
+        "year": "1973",
+        "image": "/images/history2.jpg",
+        "text": "Puis, le Père Alojzy Majewski, travailla comme missionnaire quatre ans au Cameroun, quitta l'Afrique en 1907 et partit pour la Pologne y fonder la toute première communauté pallottine. Ainsi, il devint le Fondateur de la Province Pallottine polonaise du Christ-Roi. C'est à la demande de Mgr Jean-Baptiste Gahamanyi, premier Evêque de Butare, que les Missionnaires Pallottins de la Province Polonaise Christ-Roi sont arrivés dans la Région des Grands Lacs. Le premier groupe de 10 missionnaires est arrivé au Rwanda le 08 Juin 1973. Dès leur arrivée au Rwanda, ils ont principalement pris en charge les paroisses dans le Diocèse de Butare à Mugombwa et plus tard à Kansi et Gikongoro ; dans l'Archidiocèse de Kigali à Masaka, Gikondo et Kabuga ; dans le Diocèse de Kabgayi à Kinazi et Ruhango."
+      },
+      {
+        "year": "2015",
+        "image": "/images/history3.jpg",
+        "caption": "Mgr Henryk HOSER, un des premiers missionnaires polonais au Rwanda",
+        "text": "En Juin 1981, les Pallottins ont commencé la mission au Zaïre (aujourd'hui République Démocratique du Congo) et ont servi dans les paroisses de Rugari et Rutshuru dans le Diocèse de Goma. En 1986, la première Communauté a été érigée à Bruxelles en Belgique. Et le 03 Mai 1988, la Délégature est devenue Région Sainte Famille dépendante de la Province Christ Roi. Le 27 Décembre 2015, cette Région a été canoniquement érigée en Province, selon la loi SAC numéros 89, 311 et 312 et la Décision de la XXe Assemblée Générale, numéro 8. Cette Province Sainte Famille est la première en Afrique. Elle a un caractère international et interculturel, puisqu'elle est composée de 111 membres originaires de trois Pays : Pologne, Rwanda et République Démocratique du Congo."
+      }
+    ]
+  },
   "direction": {
     "badge": "Administration Provinciale",
     "title": "Gouvernement Provincial",
     "subtitle": "Province Sainte Famille · SAC",
     "members": [
-      {
-        "name": "P. Eugène NIYONZIMA",
-        "role": "Recteur Provincial",
-        "image": "/images/eugene.jpg"
-      },
-      {
-        "name": "P. Jean Pierre NSABIMANA",
-        "role": "Premier Consulteur",
-        "image": "/images/pierre.jpg"
-      },
-      {
-        "name": "P. Ildéphonse BIZIMUNGU",
-        "role": "Consulteur",
-        "image": "/images/bizimungu.jpg"
-      },
-      {
-        "name": "P. Jean de Dieu KAMBALE MATHE",
-        "role": "Consulteur",
-        "image": "/images/kambale.jpeg"
-      },
-      {
-        "name": "P. Simon SAFARI BURHUNGANE",
-        "role": "Consulteur",
-        "image": "/images/simon.jpg"
-      }
+      { "name": "P. Eugène NIYONZIMA", "role": "Recteur Provincial", "image": "/images/eugene.jpg" },
+      { "name": "P. Jean Pierre NSABIMANA", "role": "Premier Consulteur", "image": "/images/pierre.jpg" },
+      { "name": "P. Ildéphonse BIZIMUNGU", "role": "Consulteur", "image": "/images/bizimungu.jpg" },
+      { "name": "P. Jean de Dieu KAMBALE MATHE", "role": "Consulteur", "image": "/images/kambale.jpeg" },
+      { "name": "P. Simon SAFARI BURHUNGANE", "role": "Consulteur", "image": "/images/simon.jpg" }
     ]
   },
   "communities": {
@@ -89,27 +102,9 @@
     "title": "Dernières Actualités",
     "readMore": "Lire la Suite",
     "articles": [
-      {
-        "id": 1,
-        "title": "Rassemblement pour la Célébration Annuelle",
-        "date": "15 juin 2024",
-        "summary": "Une merveilleuse journée de fraternité et de prière alors que nos communautés se sont réunies pour célébrer notre mission et nos valeurs communes.",
-        "imageUrl": "/images/p2.jpg"
-      },
-      {
-        "id": 2,
-        "title": "Lancement d'un Nouveau Programme pour les Jeunes",
-        "date": "28 mai 2024",
-        "summary": "Nous sommes ravis d'annoncer un nouveau programme visant à impliquer les jeunes dans la croissance spirituelle et le service communautaire.",
-        "imageUrl": "/images/p5.jpg"
-      },
-      {
-        "id": 3,
-        "title": "Un Message de la Direction Provinciale",
-        "date": "10 mai 2024",
-        "summary": "Réflexions sur l'année écoulée et notre vision pour l'avenir, encourageant chacun à embrasser l'esprit de charité et de collaboration.",
-        "imageUrl": "/images/p6.jpg"
-      }
+      { "id": 1, "title": "Rassemblement pour la Célébration Annuelle", "date": "15 juin 2024", "summary": "Une merveilleuse journée de fraternité et de prière alors que nos communautés se sont réunies pour célébrer notre mission et nos valeurs communes.", "imageUrl": "/images/p2.jpg" },
+      { "id": 2, "title": "Lancement d'un Nouveau Programme pour les Jeunes", "date": "28 mai 2024", "summary": "Nous sommes ravis d'annoncer un nouveau programme visant à impliquer les jeunes dans la croissance spirituelle et le service communautaire.", "imageUrl": "/images/p5.jpg" },
+      { "id": 3, "title": "Un Message de la Direction Provinciale", "date": "10 mai 2024", "summary": "Réflexions sur l'année écoulée et notre vision pour l'avenir, encourageant chacun à embrasser l'esprit de charité et de collaboration.", "imageUrl": "/images/p6.jpg" }
     ]
   },
   "galleries": {
