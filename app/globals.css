@@ -68,7 +68,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--dark);
+  color: var(--gold);
   padding-bottom: 3px;
   transition: color 0.2s;
 }
@@ -77,10 +77,10 @@ body {
   position: absolute;
   bottom: 0; left: 0;
   width: 0; height: 2px;
-  background: var(--red);
+  background: var(--gold);
   transition: width 0.25s ease;
 }
-.nav-link:hover { color: var(--red); }
+.nav-link:hover { color: #E2C06A; }
 .nav-link:hover::after { width: 100%; }
 
 /* ── Mobile nav links ── */

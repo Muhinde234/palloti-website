@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { LanguageSwitcher } from "./language-switcher";
 
@@ -21,12 +22,14 @@ interface HeaderProps {
 export const Header = ({ lang, navigation }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const pathname = usePathname();
+
   const navLinks = [
-    { href: "#identity", label: navigation.identity },
-    { href: "#direction", label: navigation.provincialDirection },
-    { href: "#communities", label: navigation.communitiesAndWorks },
-    { href: "#news", label: navigation.news },
-    { href: "#galleries", label: navigation.galleries },
+    { href: `/${lang}/identity`, label: navigation.identity },
+    { href: `/${lang}/direction`, label: navigation.provincialDirection },
+    { href: `/${lang}/communities`, label: navigation.communitiesAndWorks },
+    { href: `/${lang}/news`, label: navigation.news },
+    { href: `/${lang}/galleries`, label: navigation.galleries },
   ];
 
   return (
@@ -56,9 +59,14 @@ export const Header = ({ lang, navigation }: HeaderProps) => {
         {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="nav-link">
+            <Link
+              key={link.href}
+              href={link.href}
+              className="nav-link"
+              style={{ color: pathname === link.href ? "#8B1A1A" : undefined }}
+            >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -84,14 +92,14 @@ export const Header = ({ lang, navigation }: HeaderProps) => {
       {isMenuOpen && (
         <div className="lg:hidden bg-white border-t border-gray-100 px-6 py-3">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
               className="mobile-nav-link"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
       )}
