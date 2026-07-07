@@ -63,7 +63,7 @@ export const Header = ({ lang, navigation }: HeaderProps) => {
               key={link.href}
               href={link.href}
               className="nav-link"
-              style={{ color: pathname === link.href ? "#8B1A1A" : undefined }}
+              style={{ color: pathname === link.href ? "#E2C06A" : undefined }}
             >
               {link.label}
             </Link>

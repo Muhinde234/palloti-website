@@ -14,7 +14,7 @@
 body {
   background: var(--white);
   color: var(--dark);
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-mulish), sans-serif;
 }
 
 /* ── Divider ── */
