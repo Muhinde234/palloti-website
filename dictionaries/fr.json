@@ -1,0 +1,117 @@
+{
+  "navigation": {
+    "identity": "Identité",
+    "provincialDirection": "Direction Provinciale",
+    "communitiesAndWorks": "Communautés et Œuvres",
+    "news": "Actualités",
+    "galleries": "Galeries"
+  },
+  "hero": {
+    "badge": "Societas Apostolatus Catholici",
+    "title": "Province Sainte Famille",
+    "subtitle": "SAC · Kigali, Rwanda",
+    "description": "Inspirés par Saint Vincent Pallotti, nous sommes une communauté de prêtres et de frères unis dans la mission de répandre l'amour de Dieu par la charité, l'apostolat et le service à tous.",
+    "ctaPrimary": "Découvrir Notre Mission",
+    "ctaSecondary": "Rencontrer Notre Communauté"
+  },
+  "founder": {
+    "badge": "Notre Identité",
+    "title": "Saint Vincent Pallotti",
+    "subtitle": "Fondateur des Pallottins",
+    "biography": [
+      "Vincent Pallotti descend de la famille des Pallotti de Norcia et de la famille De Rossi de Rome, il est donc de noble ascendance. Ses premières études se déroulent à l'école de San Pantaleone, puis au collège à Rome. C'est à l'âge de 16 ans qu'il souhaite devenir prêtre. Il est ordonné prêtre le 16 mai 1818 et célèbre sa première messe à l'église du Gesù (Frascati), à l'autel de Notre-Dame-Refuge-des-Pécheurs.",
+      "Le 25 juillet, il devient docteur en théologie et il est nommé professeur de théologie. C'est un excellent théologien qui aurait pu faire une brillante carrière dans l'enseignement de cette discipline, mais sa vocation le porte plutôt vers l'apostolat.",
+      "Il parcourt la ville de Rome, apportant aide matérielle et réconfort à la population misérable, prêchant l'évangile, vivant de peu et partageant le peu qu'il avait, écoutant les confessions et aidant spirituellement tous les fidèles qui viennent à lui.",
+      "Pallotti était convaincu de l'importance de la charité et de sa mise en œuvre par tous les catholiques afin d'apporter la Bonne Nouvelle à tous. Il fonda la Société de l'Apostolat Catholique (SAC) en 1835, une congrégation qui continue sa mission dans le monde entier jusqu'à aujourd'hui."
+    ],
+    "quote": "L'amour du Christ nous presse.",
+    "quoteAuthor": "— Saint Vincent Pallotti"
+  },
+  "direction": {
+    "badge": "Leadership",
+    "title": "Direction Provinciale",
+    "subtitle": "Guider notre mission avec foi et sagesse",
+    "provincial": "Supérieur Provincial",
+    "vicar": "Vicaire Provincial",
+    "councilors": "Conseillers Provinciaux",
+    "members": [
+      {
+        "name": "P. Jean-Baptiste Nkurunziza, SAC",
+        "role": "Supérieur Provincial",
+        "message": "Nous sommes appelés à être témoins de l'amour de Dieu au Rwanda et au-delà, en suivant le charisme de notre fondateur Saint Vincent Pallotti."
+      },
+      {
+        "name": "P. Emmanuel Habimana, SAC",
+        "role": "Vicaire Provincial",
+        "message": "Notre mission est de servir le peuple de Dieu avec humilité, dévouement et l'esprit de l'Apostolat Catholique."
+      }
+    ]
+  },
+  "communities": {
+    "badge": "Notre Présence",
+    "title": "Communautés et Œuvres",
+    "subtitle": "Au service du peuple de Dieu à travers le Rwanda",
+    "items": [
+      {
+        "name": "Communauté de Kigali",
+        "location": "Kigali, Rwanda",
+        "description": "Notre maison provinciale et centre de formation, au service de la communauté urbaine par le travail pastoral, l'éducation et l'action sociale.",
+        "works": ["Ministère Paroissial", "Formation des Jeunes", "Services Sociaux"]
+      },
+      {
+        "name": "Communauté de Butare",
+        "location": "Huye, Rwanda",
+        "description": "Une communauté dynamique engagée dans l'éducation et le ministère pastoral, travaillant en étroite collaboration avec le diocèse local et les étudiants universitaires.",
+        "works": ["Aumônerie Universitaire", "Enseignement Secondaire", "Centre de Retraite"]
+      },
+      {
+        "name": "Communauté de Ruhengeri",
+        "location": "Musanze, Rwanda",
+        "description": "Au service de la province du nord par le ministère paroissial, le soutien aux soins de santé et les programmes de développement communautaire.",
+        "works": ["Ministère Paroissial", "Action Sanitaire", "Développement Communautaire"]
+      }
+    ]
+  },
+  "newsSection": {
+    "badge": "Restez Informés",
+    "title": "Dernières Actualités",
+    "readMore": "Lire la Suite",
+    "articles": [
+      {
+        "id": 1,
+        "title": "Rassemblement pour la Célébration Annuelle",
+        "date": "15 juin 2024",
+        "summary": "Une merveilleuse journée de fraternité et de prière alors que nos communautés se sont réunies pour célébrer notre mission et nos valeurs communes.",
+        "imageUrl": "/images/p2.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Lancement d'un Nouveau Programme pour les Jeunes",
+        "date": "28 mai 2024",
+        "summary": "Nous sommes ravis d'annoncer un nouveau programme visant à impliquer les jeunes dans la croissance spirituelle et le service communautaire.",
+        "imageUrl": "/images/p5.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Un Message de la Direction Provinciale",
+        "date": "10 mai 2024",
+        "summary": "Réflexions sur l'année écoulée et notre vision pour l'avenir, encourageant chacun à embrasser l'esprit de charité et de collaboration.",
+        "imageUrl": "/images/p6.jpg"
+      }
+    ]
+  },
+  "galleries": {
+    "badge": "Galerie",
+    "title": "Notre Vie en Images",
+    "subtitle": "Moments de foi, de communauté et de service"
+  },
+  "footer": {
+    "tagline": "Les Pères et Frères Pallottins de la Province Sainte Famille se consacrent à répandre l'amour de Dieu par le travail apostolique, l'éducation et le service.",
+    "quickLinks": "Liens Rapides",
+    "contact": "Contactez-Nous",
+    "address": "Gikondo - 1083 Kigali, Rwanda",
+    "phone": "+250 788 307 271 / +250 788 381 737",
+    "email": "@sac-psf",
+    "rights": "© 2026 Province Sainte Famille (SAC). Tous droits réservés."
+  }
+}

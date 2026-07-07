@@ -1,0 +1,117 @@
+{
+  "navigation": {
+    "identity": "Identity",
+    "provincialDirection": "Provincial Direction",
+    "communitiesAndWorks": "Communities & Works",
+    "news": "News",
+    "galleries": "Galleries"
+  },
+  "hero": {
+    "badge": "Societas Apostolatus Catholici",
+    "title": "Holy Family Province",
+    "subtitle": "SAC · Kigali, Rwanda",
+    "description": "Inspired by Saint Vincent Pallotti, we are a community of priests and brothers united in the mission of spreading God's love through charity, apostolate, and service to all people.",
+    "ctaPrimary": "Discover Our Mission",
+    "ctaSecondary": "Meet Our Community"
+  },
+  "founder": {
+    "badge": "Our Identity",
+    "title": "Saint Vincent Pallotti",
+    "subtitle": "Founder of the Pallottines",
+    "biography": [
+      "Vincent Pallotti was a descendant of the Pallotti family of Norcia and the De Rossi family of Rome, thus he was of noble ancestry. He completed his early studies at the school of San Pantaleone, then at the college in Rome. At the age of 16, he decided he wanted to become a priest. He was ordained a priest on May 16, 1818, and celebrated his first Mass at the Church of the Gesù (Frascati), at the altar of Our Lady, Refuge of Sinners.",
+      "On July 25, he became a doctor of theology and was appointed a professor of theology. He was an excellent theologian who could have had a brilliant career teaching this discipline, but his vocation led him more towards apostolic work.",
+      "He traveled throughout the city of Rome, providing material aid and comfort to the poor, preaching the gospel, living on little and sharing what he had, hearing confessions, and spiritually assisting all the faithful who came to him.",
+      "Pallotti was convinced of the importance of charity and its practice by all Catholics in order to bring the Good News to everyone. He founded the Society of the Catholic Apostolate (SAC) in 1835, a congregation that continues his mission worldwide to this day."
+    ],
+    "quote": "The love of Christ urges us on.",
+    "quoteAuthor": "— Saint Vincent Pallotti"
+  },
+  "direction": {
+    "badge": "Leadership",
+    "title": "Provincial Direction",
+    "subtitle": "Guiding our mission with faith and wisdom",
+    "provincial": "Provincial Superior",
+    "vicar": "Provincial Vicar",
+    "councilors": "Provincial Councilors",
+    "members": [
+      {
+        "name": "Fr. Jean-Baptiste Nkurunziza, SAC",
+        "role": "Provincial Superior",
+        "message": "We are called to be witnesses of God's love in Rwanda and beyond, following the charism of our founder Saint Vincent Pallotti."
+      },
+      {
+        "name": "Fr. Emmanuel Habimana, SAC",
+        "role": "Provincial Vicar",
+        "message": "Our mission is to serve the people of God with humility, dedication, and the spirit of the Catholic Apostolate."
+      }
+    ]
+  },
+  "communities": {
+    "badge": "Our Presence",
+    "title": "Communities & Works",
+    "subtitle": "Serving God's people across Rwanda",
+    "items": [
+      {
+        "name": "Kigali Community",
+        "location": "Kigali, Rwanda",
+        "description": "Our provincial house and center of formation, serving the urban community through pastoral work, education, and social outreach.",
+        "works": ["Parish Ministry", "Youth Formation", "Social Services"]
+      },
+      {
+        "name": "Butare Community",
+        "location": "Huye, Rwanda",
+        "description": "A vibrant community engaged in education and pastoral ministry, working closely with the local diocese and university students.",
+        "works": ["University Chaplaincy", "Secondary Education", "Retreat Center"]
+      },
+      {
+        "name": "Ruhengeri Community",
+        "location": "Musanze, Rwanda",
+        "description": "Serving the northern province through parish ministry, health care support, and community development programs.",
+        "works": ["Parish Ministry", "Health Outreach", "Community Development"]
+      }
+    ]
+  },
+  "newsSection": {
+    "badge": "Stay Informed",
+    "title": "Latest News & Updates",
+    "readMore": "Read More",
+    "articles": [
+      {
+        "id": 1,
+        "title": "Community Gathers for Annual Celebration",
+        "date": "June 15, 2024",
+        "summary": "A wonderful day of fellowship and prayer as our communities came together to celebrate our shared mission and values.",
+        "imageUrl": "/images/p2.jpg"
+      },
+      {
+        "id": 2,
+        "title": "New Youth Outreach Program Launched",
+        "date": "May 28, 2024",
+        "summary": "We are excited to announce a new program aimed at engaging young people in spiritual growth and community service.",
+        "imageUrl": "/images/p5.jpg"
+      },
+      {
+        "id": 3,
+        "title": "A Message from the Provincial Direction",
+        "date": "May 10, 2024",
+        "summary": "Reflections on the past year and our vision for the future, encouraging all to embrace the spirit of charity and collaboration.",
+        "imageUrl": "/images/p6.jpg"
+      }
+    ]
+  },
+  "galleries": {
+    "badge": "Gallery",
+    "title": "Our Life in Pictures",
+    "subtitle": "Moments of faith, community, and service"
+  },
+  "footer": {
+    "tagline": "The Pallottine Fathers and Brothers of the Holy Family Province are dedicated to spreading the love of God through apostolic work, education, and service.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact Us",
+    "address": "Gikondo - 1083 Kigali, Rwanda",
+    "phone": "+250 788 307 271 / +250 788 381 737",
+    "email": "@sac-psf",
+    "rights": "© 2026 SAC Holy Family Province. All rights reserved."
+  }
+}
