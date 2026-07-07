@@ -1,7 +1,7 @@
 {
   "navigation": {
     "identity": "Identité",
-    "provincialDirection": "Direction Provinciale",
+    "provincialDirection": "Gouvernement Provincial",
     "communitiesAndWorks": "Communautés et Œuvres",
     "news": "Actualités",
     "galleries": "Galeries"
@@ -28,22 +28,34 @@
     "quoteAuthor": "— Saint Vincent Pallotti"
   },
   "direction": {
-    "badge": "Leadership",
-    "title": "Direction Provinciale",
-    "subtitle": "Guider notre mission avec foi et sagesse",
-    "provincial": "Supérieur Provincial",
-    "vicar": "Vicaire Provincial",
-    "councilors": "Conseillers Provinciaux",
+    "badge": "Administration Provinciale",
+    "title": "Gouvernement Provincial",
+    "subtitle": "Province Sainte Famille · SAC",
     "members": [
       {
-        "name": "P. Jean-Baptiste Nkurunziza, SAC",
-        "role": "Supérieur Provincial",
-        "message": "Nous sommes appelés à être témoins de l'amour de Dieu au Rwanda et au-delà, en suivant le charisme de notre fondateur Saint Vincent Pallotti."
+        "name": "P. Eugène NIYONZIMA",
+        "role": "Recteur Provincial",
+        "image": "/images/eugene.jpg"
       },
       {
-        "name": "P. Emmanuel Habimana, SAC",
-        "role": "Vicaire Provincial",
-        "message": "Notre mission est de servir le peuple de Dieu avec humilité, dévouement et l'esprit de l'Apostolat Catholique."
+        "name": "P. Jean Pierre NSABIMANA",
+        "role": "Premier Consulteur",
+        "image": "/images/pierre.jpg"
+      },
+      {
+        "name": "P. Ildéphonse BIZIMUNGU",
+        "role": "Consulteur",
+        "image": "/images/bizimungu.jpg"
+      },
+      {
+        "name": "P. Jean de Dieu KAMBALE MATHE",
+        "role": "Consulteur",
+        "image": "/images/kambale.jpeg"
+      },
+      {
+        "name": "P. Simon SAFARI BURHUNGANE",
+        "role": "Consulteur",
+        "image": "/images/simon.jpg"
       }
     ]
   },

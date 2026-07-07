@@ -1,7 +1,7 @@
 {
   "navigation": {
     "identity": "Identity",
-    "provincialDirection": "Provincial Direction",
+    "provincialDirection": "Provincial Government",
     "communitiesAndWorks": "Communities & Works",
     "news": "News",
     "galleries": "Galleries"
@@ -28,22 +28,34 @@
     "quoteAuthor": "— Saint Vincent Pallotti"
   },
   "direction": {
-    "badge": "Leadership",
-    "title": "Provincial Direction",
-    "subtitle": "Guiding our mission with faith and wisdom",
-    "provincial": "Provincial Superior",
-    "vicar": "Provincial Vicar",
-    "councilors": "Provincial Councilors",
+    "badge": "Provincial Administration",
+    "title": "Provincial Government",
+    "subtitle": "Holy Family Province · SAC",
     "members": [
       {
-        "name": "Fr. Jean-Baptiste Nkurunziza, SAC",
-        "role": "Provincial Superior",
-        "message": "We are called to be witnesses of God's love in Rwanda and beyond, following the charism of our founder Saint Vincent Pallotti."
+        "name": "Fr. Eugène NIYONZIMA",
+        "role": "Provincial Rector",
+        "image": "/images/eugene.jpg"
       },
       {
-        "name": "Fr. Emmanuel Habimana, SAC",
-        "role": "Provincial Vicar",
-        "message": "Our mission is to serve the people of God with humility, dedication, and the spirit of the Catholic Apostolate."
+        "name": "Fr. Jean Pierre NSABIMANA",
+        "role": "First Consultor",
+        "image": "/images/pierre.jpg"
+      },
+      {
+        "name": "Fr. Ildéphonse BIZIMUNGU",
+        "role": "Consultor",
+        "image": "/images/bizimungu.jpg"
+      },
+      {
+        "name": "Fr. Jean de Dieu KAMBALE MATHE",
+        "role": "Consultor",
+        "image": "/images/kambale.jpeg"
+      },
+      {
+        "name": "Fr. Simon SAFARI BURHUNGANE",
+        "role": "Consultor",
+        "image": "/images/simon.jpg"
       }
     ]
   },
