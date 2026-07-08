@@ -297,7 +297,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       {/* ═══════════════════════════════════════
           § 5  PARALLAX QUOTE
       ═══════════════════════════════════════ */}
-      <section className="relative py-36 overflow-hidden">
+      <section className="relative py-36 overflow-hidden mb-32">
         <ParallaxSection className="absolute inset-0">
           <Image src="/images/home4.jpeg" alt="" fill className="object-cover" />
         </ParallaxSection>
