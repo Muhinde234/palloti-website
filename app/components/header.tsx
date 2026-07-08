@@ -77,16 +77,7 @@ export const Header = ({ lang, navigation }: HeaderProps) => {
             </div>
           </div>
 
-          {/* Center: p3 emblem */}
-          <div className="absolute left-1/2 -translate-x-1/2">
-            <Image
-              src="/images/p3.png"
-              alt="SAC Emblem"
-              width={80}
-              height={80}
-              className="object-contain drop-shadow-lg"
-            />
-          </div>
+
 
           {/* Right: socials */}
           <div className="flex items-center gap-3">
