@@ -1,10 +1,77 @@
 {
   "navigation": {
+    "home": "Home",
     "identity": "Identity",
     "provincialDirection": "Provincial Government",
     "communitiesAndWorks": "Communities & Works",
     "news": "News",
     "galleries": "Galleries"
+  },
+  "home": {
+    "heroBadge": "Holy Family Province",
+    "heroTitle": "Welcome to the Official Website of the Holy Family Province",
+    "heroSubtitle": "Inspired by Saint Vincent Pallotti, we are a community of priests and brothers united in the mission of spreading God's love through charity, apostolate, and service.",
+    "ctaPrimary": "Discover Our Mission",
+    "ctaSecondary": "Our Communities",
+    "statFounded": "Founded",
+    "statMembers": "Members",
+    "statCountries": "Countries",
+    "welcomeBadge": "A Word from the Provincial Rector",
+    "welcomeTitle": "Dear Brothers, Friends and Acquaintances",
+    "rectorTitle": "Provincial Rector",
+    "rectorName": "Fr. Eugène NIYONZIMA, SAC",
+    "rectorQuote": "A life dedicated to the service of God and his people in the spirit of St. Vincent Pallotti.",
+    "welcomeBody": [
+      "If for some 'the Internet seems to be a hotbed of vulgar entertainment and superficial content, which thrives on the dark side of our human nature', for us, if we will, it can be an instrument of evangelization and unprecedented fraternal communion.",
+      "Even if Vincent Pallotti did not live in the age of the Internet, he was, without a shadow of a doubt, 'a skilful communicator and a man of many relationships' as his epistolary collection testifies. He took advantage of printed materials to disseminate his pastoral and apostolic initiatives. One would dare to say that if our dear Founder were of our time, he would have learned to speak with the language of today and to use the means of communication of our time.",
+      "It will be remembered that in the 'Rule' called 'Copia Lambruschini' he suggested: 'all should learn the language of the country where they live, without neglecting culture, the proper language, which will be very useful on the spot, or for the works of the glory of God, and the spiritual advantages of one's neighbor' (OOCC VII, p.162).",
+      "This is why I hope that this site will be a way for us to learn the language of the country, of the world in which we live, without neglecting modern or even postmodern culture, but without letting ourselves be chained by its grey areas either."
+    ],
+    "newsBadge": "Stay Informed",
+    "newsTitle": "Latest News & Publications",
+    "readStory": "Read Story",
+    "viewAllNews": "View All News",
+    "newsItems": [
+      {
+        "date": "29/06/2026",
+        "tags": "Newsletter | Press Releases | Generalate | Holy Family Province",
+        "title": "Official Publication of the Appointments of Confreres 2026-2027",
+        "excerpt": "Official Publication of the Appointments of the Confreres 2026-2027 for the Holy Family Province."
+      },
+      {
+        "date": "17/05/2026",
+        "tags": "Newsletter | Generalate | Holy Family Province | Union of the Catholic Apostolate",
+        "title": "International Meeting of Pallottine Trainers — Kigali, Rwanda, from 16...",
+        "excerpt": "The work of this meeting, which brings together trainers and formation directors from across the Pallottine world."
+      },
+      {
+        "date": "12/03/2026",
+        "tags": "Newsletter | Press Releases | Holy Family Province",
+        "title": "Info PSF No 25 — March 2026",
+        "excerpt": "Through this information, we want to strengthen the sense of belonging and fraternal communion within our Province."
+      },
+      {
+        "date": "17/02/2026",
+        "tags": "Newsletter | Generalate | Holy Family Province",
+        "title": "Handover and Takeover within the Provincial Commissary",
+        "excerpt": "Unless the Lord builds the house, the builders work in vain. Handover and resumption between the outgoing and incoming Provincial Councils."
+      },
+      {
+        "date": "07/02/2026",
+        "tags": "Newsletter | Generalate | Holy Family Province | Union of the Catholic Apostolate",
+        "title": "Handover and Resumption between the Outgoing and Incoming Provincial Councils",
+        "excerpt": "A solemn ceremony marking the transition of leadership within the Holy Family Province."
+      },
+      {
+        "date": "30/01/2026",
+        "tags": "Newsletter | Holy Family Province",
+        "title": "Provincial Assembly — Summary and Resolutions",
+        "excerpt": "Key decisions and resolutions adopted during the Provincial Assembly held in Kigali."
+      }
+    ],
+    "missionBadge": "Our Inspiration",
+    "missionQuote": "The love of Christ urges us on.",
+    "missionAuthor": "Saint Vincent Pallotti"
   },
   "hero": {
     "badge": "Societas Apostolatus Catholici",

@@ -1,17 +1,13 @@
 import Image from "next/image";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/Footer";
-
-const getDictionary = async (lang: string) => {
-  if (lang === "fr") return import("../../../dictionaries/fr.json").then((m) => m.default);
-  return import("../../../dictionaries/en.json").then((m) => m.default);
-};
+import { getDictionary } from "@/lib/getDictionary";
 
 type Chapter = { year: string; image: string; text: string; caption?: string };
 
 export default async function HistoryPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  const dict = getDictionary(lang);
   const { history } = dict;
 
   return (

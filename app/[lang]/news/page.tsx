@@ -2,15 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/Footer";
-
-const getDictionary = async (lang: string) => {
-  if (lang === "fr") return import("../../../dictionaries/fr.json").then((m) => m.default);
-  return import("../../../dictionaries/en.json").then((m) => m.default);
-};
+import { getDictionary } from "@/lib/getDictionary";
 
 export default async function NewsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  const dict = getDictionary(lang);
   const { newsSection } = dict;
 
   return (

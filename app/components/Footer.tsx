@@ -18,6 +18,7 @@ interface FooterProps {
   lang: string;
   dict: FooterDict;
   navigation: { 
+    home: string;
     identity: string; 
     provincialDirection: string; 
     communitiesAndWorks: string; 
@@ -28,6 +29,7 @@ interface FooterProps {
 
 export const Footer = ({ lang, dict, navigation }: FooterProps) => {
   const routes = [
+    { href: `/${lang}`, label: navigation.home },
     { href: `/${lang}/identity`, label: navigation.identity },
     { href: `/${lang}/direction`, label: navigation.provincialDirection },
     { href: `/${lang}/communities`, label: navigation.communitiesAndWorks },

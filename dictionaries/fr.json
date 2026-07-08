@@ -1,10 +1,77 @@
 {
   "navigation": {
+    "home": "Accueil",
     "identity": "Identité",
     "provincialDirection": "Gouvernement Provincial",
     "communitiesAndWorks": "Communautés et Œuvres",
     "news": "Actualités",
     "galleries": "Galeries"
+  },
+  "home": {
+    "heroBadge": "Province Sainte Famille",
+    "heroTitle": "Bienvenue sur le Site Officiel de la Province Sainte Famille",
+    "heroSubtitle": "Inspirés par Saint Vincent Pallotti, nous sommes une communauté de prêtres et de frères unis dans la mission de répandre l'amour de Dieu par la charité, l'apostolat et le service.",
+    "ctaPrimary": "Découvrir Notre Mission",
+    "ctaSecondary": "Nos Communautés",
+    "statFounded": "Année de Fondation",
+    "statMembers": "Membres",
+    "statCountries": "Pays",
+    "welcomeBadge": "Un Mot du Recteur Provincial",
+    "welcomeTitle": "Chers Frères, Amis et Connaissances",
+    "rectorTitle": "Recteur Provincial",
+    "rectorName": "P. Eugène NIYONZIMA, SAC",
+    "rectorQuote": "Une vie dédiée au service de Dieu et de son peuple dans l'esprit de St Vincent Pallotti.",
+    "welcomeBody": [
+      "Si pour certains 'l'Internet semble être un foyer de divertissements vulgaires et de contenus superficiels, qui prospèrent sur le côté sombre de notre nature humaine', pour nous, si nous le voulons, il peut être un instrument d'évangélisation et de communion fraternelle sans précédent.",
+      "Même si Vincent Pallotti n'a pas vécu à l'ère d'Internet, il était, sans l'ombre d'un doute, 'un communicateur habile et un homme de nombreuses relations' comme en témoigne sa collection épistolaire. Il a profité des imprimés pour diffuser ses initiatives pastorales et apostoliques. On oserait dire que si notre cher Fondateur était de notre temps, il aurait appris à parler le langage d'aujourd'hui et à utiliser les moyens de communication de notre époque.",
+      "On se souviendra que dans la 'Règle' appelée 'Copia Lambruschini' il suggérait : 'tous devraient apprendre la langue du pays où ils vivent, sans négliger la culture, la langue propre, qui sera très utile sur place, ou pour les œuvres de la gloire de Dieu, et les avantages spirituels du prochain' (OOCC VII, p.162).",
+      "C'est pourquoi j'espère que ce site sera pour nous un moyen d'apprendre la langue du pays, du monde dans lequel nous vivons, sans négliger la culture moderne ou même postmoderne, mais sans nous laisser enchaîner par ses zones d'ombre non plus."
+    ],
+    "newsBadge": "Restez Informés",
+    "newsTitle": "Dernières Actualités & Publications",
+    "readStory": "Lire l'article",
+    "viewAllNews": "Voir Toutes les Actualités",
+    "newsItems": [
+      {
+        "date": "29/06/2026",
+        "tags": "Newsletter | Communiqués | Généralat | Province Sainte Famille",
+        "title": "Publication Officielle des Nominations des Confrères 2026-2027",
+        "excerpt": "Publication Officielle des Nominations des Confrères 2026-2027 pour la Province Sainte Famille."
+      },
+      {
+        "date": "17/05/2026",
+        "tags": "Newsletter | Généralat | Province Sainte Famille | Union de l'Apostolat Catholique",
+        "title": "Rencontre Internationale des Formateurs Pallottins — Kigali, Rwanda, du 16...",
+        "excerpt": "Les travaux de cette rencontre, qui rassemble les formateurs et directeurs de formation du monde pallottin."
+      },
+      {
+        "date": "12/03/2026",
+        "tags": "Newsletter | Communiqués | Province Sainte Famille",
+        "title": "Info PSF N° 25 — Mars 2026",
+        "excerpt": "À travers cette information, nous voulons renforcer le sentiment d'appartenance et la communion fraternelle au sein de notre Province."
+      },
+      {
+        "date": "17/02/2026",
+        "tags": "Newsletter | Généralat | Province Sainte Famille",
+        "title": "Passation de Pouvoirs au sein du Commissariat Provincial",
+        "excerpt": "Si le Seigneur ne bâtit pas la maison, les bâtisseurs travaillent en vain."
+      },
+      {
+        "date": "07/02/2026",
+        "tags": "Newsletter | Généralat | Province Sainte Famille | Union de l'Apostolat Catholique",
+        "title": "Passation entre les Conseils Provinciaux Sortant et Entrant",
+        "excerpt": "Une cérémonie solennelle marquant la transition de la direction au sein de la Province Sainte Famille."
+      },
+      {
+        "date": "30/01/2026",
+        "tags": "Newsletter | Province Sainte Famille",
+        "title": "Assemblée Provinciale — Résumé et Résolutions",
+        "excerpt": "Décisions et résolutions clés adoptées lors de l'Assemblée Provinciale tenue à Kigali."
+      }
+    ],
+    "missionBadge": "Notre Inspiration",
+    "missionQuote": "L'amour du Christ nous presse.",
+    "missionAuthor": "Saint Vincent Pallotti"
   },
   "hero": {
     "badge": "Societas Apostolatus Catholici",

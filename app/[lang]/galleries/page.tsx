@@ -1,11 +1,7 @@
 import Image from "next/image";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/Footer";
-
-const getDictionary = async (lang: string) => {
-  if (lang === "fr") return import("../../../dictionaries/fr.json").then((m) => m.default);
-  return import("../../../dictionaries/en.json").then((m) => m.default);
-};
+import { getDictionary } from "@/lib/getDictionary";
 
 const images = [
   "/images/p2.jpg",
@@ -18,7 +14,7 @@ const images = [
 
 export default async function GalleriesPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  const dict = getDictionary(lang);
 
   return (
     <>
