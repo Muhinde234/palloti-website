@@ -82,9 +82,9 @@ export const Header = ({ lang, navigation }: HeaderProps) => {
             <Image
               src="/images/p3.png"
               alt="SAC Emblem"
-              width={36}
-              height={36}
-              className="object-contain drop-shadow-md"
+              width={80}
+              height={80}
+              className="object-contain drop-shadow-lg"
             />
           </div>
 
@@ -128,7 +128,7 @@ export const Header = ({ lang, navigation }: HeaderProps) => {
                   SAC Holy Family Province
                 </span>
                 <span className="text-[9px] md:text-[11px] font-bold tracking-[0.15em] uppercase text-[#C9A84C] mt-1">
-                  Societas Apostolatus Catholici · Kigali
+                  Societas Apostolatus Catholici
                 </span>
               </div>
             </Link>

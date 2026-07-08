@@ -13,12 +13,10 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
     <>
       <Header lang={lang} navigation={dict.navigation} />
 
-      <div className="py-14" style={{ background: "#8B1A1A" }}>
-        <div className="container mx-auto px-6 text-center text-white">
-          <p className="badge" style={{ color: "#C9A84C" }}>{newsSection.badge}</p>
-          <h1 className="text-4xl md:text-5xl font-bold mt-2" style={{ fontFamily: "Georgia, serif" }}>
-            {newsSection.title}
-          </h1>
+      <div className="page-banner">
+        <div className="container mx-auto px-6">
+          <p className="badge">{newsSection.badge}</p>
+          <h1>{newsSection.title}</h1>
         </div>
       </div>
 
@@ -26,23 +24,31 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {newsSection.articles.map((article: { id: number; title: string; date: string; summary: string; imageUrl: string }) => (
-              <div key={article.id} className="card">
-                <div className="relative h-48 overflow-hidden">
-                  <Image src={article.imageUrl} alt={article.title} fill className="object-cover transition-transform duration-500 hover:scale-105" />
+              <div key={article.id} className="card group">
+                <div className="relative h-52 overflow-hidden">
+                  <Image src={article.imageUrl} alt={article.title} fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-[var(--dark)]/0 group-hover:bg-[var(--dark)]/20 transition-all duration-500" />
+                  <div className="absolute top-4 left-4 bg-[var(--red)] px-3 py-1">
+                    <span className="text-[9px] font-bold tracking-[0.2em] uppercase text-[var(--gold)]">
+                      {article.date}
+                    </span>
+                  </div>
                 </div>
                 <div className="p-6">
-                  <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "#C9A84C", fontFamily: "Arial, sans-serif" }}>
-                    {article.date}
-                  </p>
-                  <h3 className="text-base font-bold mb-3 leading-snug" style={{ color: "#1C1C1C", fontFamily: "Georgia, serif" }}>
+                  <h3 className="text-base font-bold mb-3 leading-snug text-[var(--dark)] group-hover:text-[var(--red)] transition-colors"
+                    style={{ fontFamily: "Georgia, serif" }}>
                     {article.title}
                   </h3>
-                  <p className="text-sm leading-relaxed mb-5" style={{ color: "#6B7280" }}>
+                  <p className="text-sm leading-relaxed mb-5 text-[var(--gray)] line-clamp-3">
                     {article.summary}
                   </p>
-                  <Link href={`/${lang}/news/${article.id}`} className="read-more">
-                    {newsSection.readMore} →
-                  </Link>
+                  <div className="flex items-center gap-3 pt-4 border-t border-[#e8e2d9]">
+                    <Link href={`/${lang}/news/${article.id}`} className="read-more">
+                      {newsSection.readMore}
+                    </Link>
+                    <span className="w-5 h-px bg-[var(--gold)] group-hover:w-9 transition-all duration-300" />
+                  </div>
                 </div>
               </div>
             ))}

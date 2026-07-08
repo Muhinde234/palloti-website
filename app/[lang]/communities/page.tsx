@@ -10,13 +10,11 @@ export default async function CommunitiesPage({ params }: { params: Promise<{ la
     <>
       <Header lang={lang} navigation={dict.navigation} />
 
-      <div className="py-14" style={{ background: "#8B1A1A" }}>
-        <div className="container mx-auto px-6 text-center text-white">
-          <p className="badge" style={{ color: "#C9A84C" }}>{dict.communities.badge}</p>
-          <h1 className="text-4xl md:text-5xl font-bold mt-2" style={{ fontFamily: "Georgia, serif" }}>
-            {dict.communities.title}
-          </h1>
-          <p className="mt-2 text-base" style={{ color: "rgba(255,255,255,0.7)" }}>{dict.communities.subtitle}</p>
+      <div className="page-banner">
+        <div className="container mx-auto px-6">
+          <p className="badge">{dict.communities.badge}</p>
+          <h1>{dict.communities.title}</h1>
+          <p className="subtitle">{dict.communities.subtitle}</p>
         </div>
       </div>
 
@@ -25,19 +23,21 @@ export default async function CommunitiesPage({ params }: { params: Promise<{ la
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {dict.communities.items.map((community: { name: string; location: string; description: string; works: string[] }, index: number) => (
               <div key={index} className="card">
-                <div style={{ height: 4, background: "#8B1A1A" }} />
+                <div className="h-1 bg-[var(--red)]" />
                 <div className="p-7">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold mb-4" style={{ background: "#8B1A1A", fontFamily: "Arial, sans-serif" }}>
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-[var(--white)] font-bold mb-4 bg-[var(--red)]"
+                    style={{ fontFamily: "Georgia, serif" }}>
                     {index + 1}
                   </div>
-                  <h3 className="text-lg font-bold mb-1" style={{ color: "#8B1A1A", fontFamily: "Georgia, serif" }}>{community.name}</h3>
-                  <p className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: "#C9A84C", fontFamily: "Arial, sans-serif" }}>
+                  <h3 className="text-lg font-bold mb-1 text-[var(--red)]"
+                    style={{ fontFamily: "Georgia, serif" }}>{community.name}</h3>
+                  <p className="text-xs font-semibold uppercase tracking-wider mb-4 text-[var(--gold)]">
                     📍 {community.location}
                   </p>
-                  <p className="text-sm leading-relaxed mb-5" style={{ color: "#6B7280" }}>{community.description}</p>
+                  <p className="text-sm leading-relaxed mb-5 text-[var(--gray)]">{community.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {community.works.map((work: string, i: number) => (
-                      <span key={i} className="text-xs px-3 py-1 rounded-full font-medium" style={{ background: "#F9F6F1", color: "#8B1A1A", border: "1px solid #e5e0d8" }}>
+                      <span key={i} className="text-xs px-3 py-1 rounded-full font-medium bg-[var(--cream2)] text-[var(--red)] border border-[#e5e0d8]">
                         {work}
                       </span>
                     ))}
