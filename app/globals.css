@@ -46,9 +46,8 @@ body {
 }
 
 p {
-  font-size: 1rem;     /* 18px — always readable */
+  font-size: 1rem;
   line-height: 1.8;
-  color: var(--mid);
 }
 
 /* ── Eyebrow / Badge ── */

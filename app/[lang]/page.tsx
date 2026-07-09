@@ -195,37 +195,48 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       {/* ═══════════════════════════════════════
           § 5  PARALLAX QUOTE
       ═══════════════════════════════════════ */}
-      <section className="relative py-16 md:py-24 overflow-hidden mb-0">
-        <ParallaxSection className="absolute inset-0">
-          <Image src="/images/home4.jpeg" alt="" fill className="object-cover" />
-        </ParallaxSection>
-        <div className="absolute inset-0"
-          style={{ background: "linear-gradient(135deg, rgba(62,32,9,0.97) 0%, rgba(92,51,23,0.93) 50%, rgba(122,69,32,0.90) 100%)" }} />
-        <div className="absolute right-20 top-1/2 -translate-y-1/2 opacity-[0.04] pointer-events-none hidden xl:block">
-          <svg width="320" height="320" viewBox="0 0 100 100" fill="white">
+      <section className="relative py-10 md:py-14 overflow-hidden bg-gradient-to-br from-[#3e2009] via-[#5c3317] to-[#7a4520] mb-32">
+
+        {/* Cross watermark */}
+        <div className="absolute right-16 top-1/2 -translate-y-1/2 opacity-[0.04] pointer-events-none hidden xl:block">
+          <svg width="240" height="240" viewBox="0 0 100 100" fill="white">
             <rect x="43" y="5" width="14" height="90" />
             <rect x="5" y="38" width="90" height="14" />
           </svg>
         </div>
 
-        <FadeUp className="relative z-10 container mx-auto px-6 text-center max-w-4xl">
-          <div className="flex justify-center mb-8">
-            
-          </div>
-          <div className="flex items-center justify-center gap-5 mb-10">
-            <div className="w-16 h-px bg-[var(--gold)]/50" />
-            <span className="text-xs font-bold tracking-[0.35em] uppercase text-[var(--gold)]">
+        <FadeUp className="relative z-10 container mx-auto px-6 text-center max-w-2xl">
+
+          {/* Badge */}
+          <div className="flex items-center justify-center gap-4 mb-5">
+            <div className="w-10 h-px bg-[var(--gold)]/50" />
+            <span className="text-[10px] font-bold tracking-[0.35em] uppercase text-[var(--gold)]">
               {dict.home.missionBadge}
             </span>
-            <div className="w-16 h-px bg-[var(--gold)]/50" />
+            <div className="w-10 h-px bg-[var(--gold)]/50" />
           </div>
-          <blockquote className="text-white font-light italic leading-[1.4] mb-10"
-            style={{ fontSize: "clamp(1.6rem, 4vw, 3rem)" }}>
+
+          {/* Quote */}
+          <blockquote className="text-white font-light italic leading-snug mb-6 text-2xl md:text-3xl">
             &ldquo;{dict.home.missionQuote}&rdquo;
           </blockquote>
-         
-         
-          <Link href={`/${lang}/identity`} className="btn-outline">{dict.home.ctaPrimary}</Link>
+
+          {/* Author */}
+          <p className="text-white text-xs font-bold tracking-[0.3em] uppercase mb-6">
+            — {dict.home.missionAuthor}
+          </p>
+
+          {/* CTA */}
+          <Link
+            href={`/${lang}/identity`}
+            className="inline-flex items-center gap-2 px-6 py-2.5 border border-white/40 text-white text-xs font-bold uppercase tracking-[0.15em] rounded-full hover:bg-white hover:text-[var(--red-dk)] transition-all duration-300"
+          >
+            {dict.home.ctaPrimary}
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
+
         </FadeUp>
       </section>
 

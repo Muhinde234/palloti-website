@@ -137,40 +137,37 @@ export const Footer = ({ lang, dict, navigation }: FooterProps) => {
         </div>
 
         {/* BOTTOM BAR */}
-        <div className="mt-10 pt-6 border-t border-white/30">
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
-            <p className="text-xs font-bold tracking-widest uppercase text-center lg:text-left order-3 lg:order-1" style={{ color: "#ffffff" }}>
+        <div className="mt-4 pt-3 border-t border-white/20">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-2">
+            <span className="text-xs font-bold tracking-widest text-center lg:text-left order-3 lg:order-1 text-white/80">
               {dict.rights}
-            </p>
-            <div className="order-2 flex flex-col items-center gap-1">
-              <p className="text-xs uppercase tracking-[0.3em] font-medium" style={{ color: "#ffffff" }}>Developed by</p>
+            </span>
+            <div className="order-2 flex items-center gap-2">
+              <span className="text-xs font-medium text-white/80">Developed by</span>
               <a href="https://santech.rw" target="_blank" rel="noopener noreferrer"
-                className="font-black text-sm tracking-widest transition-colors" style={{ color: "var(--gold)" }}>
+                className="font-black text-xs tracking-widest text-yellow-400 hover:text-yellow-300 transition-colors">
                 SANTECH
               </a>
             </div>
-            <div className="flex flex-col items-center lg:items-end gap-3 order-1 lg:order-3">
-              <div className="flex items-center gap-3">
+            <div className="flex flex-col items-center lg:items-end gap-2 order-1 lg:order-3">
+              <div className="flex items-center gap-2">
                 {socialLinks.map((social) => (
                   <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer"
-                    className="w-9 h-9 flex items-center justify-center rounded-full border border-white/40 text-white hover:bg-white hover:text-[var(--red-dk)] hover:border-white transition-all duration-300"
+                    className="w-7 h-7 flex items-center justify-center rounded-full border border-white/40 text-white/80 hover:bg-white hover:text-[var(--red-dk)] hover:border-white transition-all duration-300"
                     title={social.name}>
                     {social.icon}
                   </a>
                 ))}
               </div>
-              <p className="text-xs uppercase tracking-widest font-bold" style={{ color: "#ffffff" }}>
+              <span className="text-xs font-bold text-white/80">
                 Society of the Catholic Apostolate
-              </p>
+              </span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Watermark */}
-      <div className="absolute -bottom-20 -right-20 opacity-[0.03] pointer-events-none rotate-12 hidden md:block">
-        <Image src="/p4.png" alt="" width={500} height={500} />
-      </div>
+    
     </footer>
   );
 };
