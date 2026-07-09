@@ -24,9 +24,8 @@ export const LanguageSwitcher = () => {
               href={redirectedPathName(locale)}
               className="text-xs font-bold uppercase tracking-widest px-2 py-1 rounded transition-colors"
               style={{
-                fontFamily: "Arial, sans-serif",
-                color: isActive ? "#fff" : "#8B1A1A",
-                backgroundColor: isActive ? "#8B1A1A" : "transparent",
+                color: isActive ? "#fff" : "var(--red)",
+                backgroundColor: isActive ? "var(--red)" : "transparent",
               }}
             >
               {locale}

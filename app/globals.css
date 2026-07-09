@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --red:    #8B1A1A;   /* deep crimson — authority */
-  --red-dk: #6B1212;   /* darkened crimson — hover/depth */
-  --red-lt: #A52020;   /* lighter crimson — subtle accents */
+  --red:    #5C3317;   /* rich brown — authority */
+  --red-dk: #3E2009;   /* dark brown — hover/depth */
+  --red-lt: #7A4520;   /* lighter brown — subtle accents */
   --gold:   #D4A843;   /* warm luminous gold */
   --gold-lt:#E8B84B;   /* bright gold — hover glow */
   --gold-dk:#B8922E;   /* deep gold — pressed states */
@@ -62,7 +62,7 @@ body {
 }
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(139,26,26,0.18);
+  box-shadow: 0 20px 50px rgba(92,51,23,0.18);
 }
 
 /* ── Read-more link ── */
@@ -115,7 +115,7 @@ body {
 }
 .btn-outline:hover {
   background: var(--white);
-  color: var(--red);
+  color: var(--red-dk);
   border-color: var(--white);
   transform: translateY(-2px);
 }
@@ -160,7 +160,7 @@ body {
 .page-banner {
   position: relative;
   padding: 5rem 0 4rem;
-  background: var(--red);
+  background: linear-gradient(135deg, var(--red-dk) 0%, var(--red) 100%);
   overflow: hidden;
   text-align: center;
   color: var(--white);
