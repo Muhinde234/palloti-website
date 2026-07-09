@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className={`h-full ${mulish.variable}`}>
-      <body className="min-h-full flex flex-col" style={{ backgroundColor: "var(--pallot-cream)", fontFamily: "var(--font-mulish), sans-serif" }}>
+      <body className={`min-h-full flex flex-col antialiased ${mulish.className}`}>
         {children}
       </body>
     </html>

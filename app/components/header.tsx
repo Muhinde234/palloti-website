@@ -1,12 +1,14 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { LanguageSwitcher } from "./language-switcher";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { MapPin, Phone } from "lucide-react";
+import { LanguageSwitcher } from "./language-switcher";
+import { TopBar } from "./header/TopBar";
+import { Logo } from "./header/Logo";
+import { DesktopNav } from "./header/DesktopNav";
+import { HamburgerButton } from "./header/HamburgerButton";
+import { MobileMenu } from "./header/MobileMenu";
 
 type Navigation = {
   home: string;
@@ -36,8 +38,7 @@ export const Header = ({ lang, navigation }: HeaderProps) => {
   useEffect(() => { setIsMenuOpen(false); }, [pathname]);
 
   useEffect(() => {
-    if (isMenuOpen) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "unset";
+    document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
   }, [isMenuOpen]);
 
   const navLinks = [
@@ -51,139 +52,29 @@ export const Header = ({ lang, navigation }: HeaderProps) => {
 
   return (
     <>
-      {/* TOP BAR */}
-      <div className="w-full text-white" style={{ background: "linear-gradient(135deg, rgba(62,32,9,1) 0%, rgba(92,51,23,0.97) 50%, rgba(122,69,32,0.95) 100%)" }}>
-        <div className="container mx-auto px-4 md:px-6 py-2 flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-4 text-xs font-medium">
+      <TopBar />
 
-          {/* Left: address + phones */}
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-1">
-            <div className="flex items-center gap-1.5" style={{ color: "#ffffff" }}>
-              <MapPin size={12} className="text-[var(--gold)] shrink-0" />
-              <span>Gikondo – 1083 Kigali, RWANDA</span>
-            </div>
-            <span className="hidden sm:block text-white/20">|</span>
-            <div className="flex items-center gap-1.5" style={{ color: "#ffffff" }}>
-              <Phone size={12} className="text-[var(--gold)] shrink-0" />
-              <span>+250 788 307 271</span>
-            </div>
-            <div className="flex items-center gap-1.5" style={{ color: "#ffffff" }}>
-              <Phone size={12} className="text-[var(--gold)] shrink-0" />
-              <span>+250 788 381 737</span>
-            </div>
-          </div>
-
-          {/* Right: socials */}
-          <div className="flex items-center gap-3">
-            <a href="https://twitter.com/NiyonzimaEugne1" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1 hover:text-[var(--gold)] transition-colors" style={{ color: "#ffffff" }}>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-              </svg>
-              <span className="hidden sm:inline">@NiyonzimaEugne1</span>
-            </a>
-            <span className="text-white/30">|</span>
-            <a href="https://instagram.com/sac-psf" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1 hover:text-[var(--gold)] transition-colors" style={{ color: "#ffffff" }}>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/>
-                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
-              </svg>
-              <span className="hidden sm:inline">@sac-psf</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <header className={cn(
-        "sticky top-0 z-[100] w-full transition-all duration-300",
-        scrolled ? "bg-white/90 backdrop-blur-md shadow-md py-2" : "bg-white py-4"
-      )}>
-        <div className="container mx-auto px-4 md:px-6">
-          <nav className="flex items-center justify-between">
-
-            {/* LOGO */}
-            <Link href={`/${lang}`} className="flex items-center gap-2 md:gap-4 group shrink-0">
-              <div className="relative w-12 h-12 md:w-16 md:h-16 transition-transform group-hover:scale-105">
-                <Image src="/p4.png" alt="Logo" fill className="object-contain" priority />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-base md:text-xl leading-none text-[var(--red)]"
-                  style={{ fontFamily: "Georgia, serif" }}>
-                  SAC Holy Family Province
-                </span>
-                <span className="text-xs font-bold tracking-[0.15em] uppercase text-[var(--gold)] mt-1">
-                  Societas Apostolatus Catholici
-                </span>
-              </div>
-            </Link>
-
-            {/* DESKTOP NAV */}
-            <div className="hidden xl:flex items-center gap-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={cn(
-                    "relative py-2 text-sm font-bold uppercase tracking-wider transition-colors hover:text-[var(--gold)]",
-                    pathname === link.href ? "text-[var(--red)]" : "text-[var(--mid)]"
-                  )}
-                >
-                  {link.label}
-                  {pathname === link.href && (
-                    <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[var(--red)]" />
-                  )}
-                </Link>
-              ))}
-            </div>
-
-            {/* RIGHT: Language + Hamburger */}
-            <div className="flex items-center gap-2 md:gap-4">
+      <header
+        className={cn(
+          "sticky top-8 z-[100] w-full h-14 transition-all duration-300",
+          scrolled ? "bg-white/90 backdrop-blur-md shadow-md" : "bg-white"
+        )}
+      >
+        <div className="container mx-auto px-4 md:px-6 h-full">
+          <nav className="flex items-center justify-between h-full">
+            <Logo lang={lang} />
+            <DesktopNav navLinks={navLinks} pathname={pathname} />
+            <div className="flex items-center gap-2 md:gap-3">
               <div className="hidden sm:block">
                 <LanguageSwitcher />
               </div>
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="xl:hidden p-2 text-[var(--red)] focus:outline-none"
-                aria-label="Toggle menu"
-              >
-                <div className="w-6 h-5 relative flex flex-col justify-between">
-                  <span className={cn("w-full h-0.5 bg-current transition-all duration-300", isMenuOpen && "rotate-45 translate-y-2")} />
-                  <span className={cn("w-full h-0.5 bg-current transition-all duration-300", isMenuOpen && "opacity-0")} />
-                  <span className={cn("w-full h-0.5 bg-current transition-all duration-300", isMenuOpen && "-rotate-45 -translate-y-2")} />
-                </div>
-              </button>
+              <HamburgerButton isOpen={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)} />
             </div>
           </nav>
         </div>
       </header>
 
-      {/* MOBILE MENU */}
-      <div className={cn(
-        "fixed inset-0 z-[90] transition-all duration-500 ease-in-out xl:hidden",
-        isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-      )} style={{ background: "linear-gradient(135deg, rgba(62,32,9,1) 0%, rgba(92,51,23,0.97) 50%, rgba(122,69,32,0.95) 100%)" }}>
-        <div className="flex flex-col h-full pt-28 px-8 gap-6 overflow-y-auto">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                "text-2xl font-serif font-bold border-b border-white/20 pb-4 transition-all",
-                pathname === link.href ? "text-[var(--gold)] translate-x-2" : "text-white"
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <div className="mt-4 sm:hidden">
-            <p className="text-xs uppercase tracking-widest text-white/50 mb-4">Select Language</p>
-            <LanguageSwitcher />
-          </div>
-          <div className="mt-auto pb-10 text-center">
-            <p className="text-[var(--gold)] font-bold text-sm tracking-widest">SAC HOLY FAMILY PROVINCE</p>
-          </div>
-        </div>
-      </div>
+      <MobileMenu isOpen={isMenuOpen} navLinks={navLinks} pathname={pathname} />
     </>
   );
 };
