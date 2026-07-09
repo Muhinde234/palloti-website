@@ -61,17 +61,17 @@ export const Footer = ({ lang, dict, navigation }: FooterProps) => {
 
   return (
     <footer className="relative w-full overflow-hidden text-white"
-      style={{ background: "linear-gradient(135deg, var(--red-dk) 0%, var(--red) 100%)" }}>
+      style={{ background: "linear-gradient(135deg, rgba(62,32,9,1) 0%, rgba(92,51,23,0.97) 50%, rgba(122,69,32,0.95) 100%)" }}>
 
       {/* Gold top border */}
       <div className="h-1.5 w-full bg-[var(--gold)]" />
 
-      <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
+      <div className="container mx-auto px-4 md:px-6 py-10 md:py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
 
           {/* BRANDING */}
-          <div className="lg:col-span-5 space-y-6 md:space-y-8 text-center sm:text-left">
-            <Link href={`/${lang}`} className="flex flex-col sm:flex-row items-center gap-5 group">
+          <div className="lg:col-span-5 space-y-6 md:space-y-8 text-center sm:text-left text-white">
+            <Link href={`/${lang}`} className="flex flex-col sm:flex-row items-center gap-5 group text-white">
               <div className="relative shrink-0">
                 <div className="absolute -inset-2 rounded-full border border-[var(--gold)]/30 group-hover:border-[var(--gold)] transition-colors duration-700" />
                 <div className="relative bg-white p-2 rounded-full shadow-xl border-2 border-[var(--gold)] transition-transform group-hover:scale-105">
@@ -79,30 +79,30 @@ export const Footer = ({ lang, dict, navigation }: FooterProps) => {
                 </div>
               </div>
               <div className="pt-1">
-                <p className="font-black text-2xl md:text-3xl tracking-tight leading-none font-serif">
-                  <span className="text-[var(--gold)]">SAC</span> Province
+                <p className="font-black text-xl md:text-2xl tracking-tight leading-none font-serif">
+                  <span className="text-[var(--gold)]">SAC</span> <span className="text-white">Province</span>
                 </p>
-                <p className="text-[10px] md:text-[11px] font-bold tracking-[0.25em] uppercase mt-2 text-[var(--gold)]/90">
+                <p className="text-xs font-bold tracking-[0.25em] uppercase mt-2" style={{ color: "#ffffff" }}>
                   Holy Family · Kigali
                 </p>
               </div>
             </Link>
-            <p className="text-sm leading-relaxed max-w-md text-white/80 italic sm:border-l-2 border-[var(--gold)]/40 sm:pl-4 mx-auto sm:mx-0">
+            <p className="text-base leading-relaxed max-w-md italic sm:border-l-2 border-white/50 sm:pl-4 mx-auto sm:mx-0" style={{ color: "#ffffff" }}>
               &ldquo;{dict.tagline}&rdquo;
             </p>
           </div>
 
           {/* QUICK LINKS */}
           <div className="lg:col-span-3 text-center sm:text-left">
-            <h4 className="text-sm font-bold uppercase tracking-[0.15em] mb-6 md:mb-8 flex items-center justify-center sm:justify-start gap-2 text-[var(--gold)]">
+            <h4 className="text-sm font-bold uppercase tracking-[0.15em] mb-5 flex items-center justify-center sm:justify-start gap-2 text-[var(--gold)]">
               <span className="hidden sm:block w-8 h-px bg-[var(--gold)]" />
               {dict.quickLinks}
             </h4>
-            <ul className="flex flex-col gap-4">
+            <ul className="flex flex-col gap-3">
               {routes.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}
-                    className="text-[15px] text-white/70 hover:text-[var(--gold)] transition-all duration-300 inline-flex items-center gap-2 group">
+                    className="text-base text-white hover:text-[var(--gold)] transition-all duration-300 inline-flex items-center gap-2 group">
                     <span className="hidden sm:block w-0 h-0.5 bg-[var(--gold)] transition-all duration-300 group-hover:w-3" />
                     {link.label}
                   </Link>
@@ -113,11 +113,11 @@ export const Footer = ({ lang, dict, navigation }: FooterProps) => {
 
           {/* CONTACT */}
           <div className="lg:col-span-4 text-center sm:text-left">
-            <h4 className="text-sm font-bold uppercase tracking-[0.15em] mb-6 md:mb-8 flex items-center justify-center sm:justify-start gap-2 text-[var(--gold)]">
+            <h4 className="text-sm font-bold uppercase tracking-[0.15em] mb-5 flex items-center justify-center sm:justify-start gap-2 text-[var(--gold)]">
               <span className="hidden sm:block w-8 h-px bg-[var(--gold)]" />
               {dict.contact}
             </h4>
-            <ul className="space-y-4 md:space-y-5">
+            <ul className="space-y-3">
               {[
                 { icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z", text: dict.address },
                 { icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z", text: dict.phone },
@@ -129,7 +129,7 @@ export const Footer = ({ lang, dict, navigation }: FooterProps) => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
                     </svg>
                   </div>
-                  <span className="text-sm text-white/80 group-hover:text-white transition-colors">{item.text}</span>
+                  <span className="text-base text-white transition-colors">{item.text}</span>
                 </li>
               ))}
             </ul>
@@ -137,36 +137,32 @@ export const Footer = ({ lang, dict, navigation }: FooterProps) => {
         </div>
 
         {/* BOTTOM BAR */}
-        <div className="mt-12 md:mt-20 pt-8 border-t border-white/10">
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
-
-            <p className="text-[10px] md:text-[11px] font-bold tracking-widest text-white/40 uppercase text-center lg:text-left order-3 lg:order-1">
+        <div className="mt-10 pt-6 border-t border-white/30">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
+            <p className="text-xs font-bold tracking-widest uppercase text-center lg:text-left order-3 lg:order-1" style={{ color: "#ffffff" }}>
               {dict.rights}
             </p>
-
             <div className="order-2 flex flex-col items-center gap-1">
-              <p className="text-[9px] uppercase tracking-[0.3em] text-white/30 font-medium">Developed by</p>
+              <p className="text-xs uppercase tracking-[0.3em] font-medium" style={{ color: "#ffffff" }}>Developed by</p>
               <a href="https://santech.rw" target="_blank" rel="noopener noreferrer"
-                className="text-[var(--gold)] font-black text-xs tracking-widest hover:text-white transition-colors">
+                className="text-white font-black text-sm tracking-widest hover:text-[var(--gold)] transition-colors">
                 SANTECH
               </a>
             </div>
-
-            <div className="flex flex-col items-center lg:items-end gap-4 order-1 lg:order-3">
+            <div className="flex flex-col items-center lg:items-end gap-3 order-1 lg:order-3">
               <div className="flex items-center gap-3">
                 {socialLinks.map((social) => (
                   <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer"
-                    className="w-9 h-9 flex items-center justify-center rounded-full border border-white/10 text-[var(--gold)] hover:bg-[var(--gold)] hover:text-[var(--red-dk)] hover:border-[var(--gold)] transition-all duration-300"
+                    className="w-9 h-9 flex items-center justify-center rounded-full border border-white/40 text-white hover:bg-white hover:text-[var(--red-dk)] hover:border-white transition-all duration-300"
                     title={social.name}>
                     {social.icon}
                   </a>
                 ))}
               </div>
-              <p className="text-[9px] md:text-[10px] text-white/30 uppercase tracking-widest font-bold">
+              <p className="text-xs uppercase tracking-widest font-bold" style={{ color: "#ffffff" }}>
                 Society of the Catholic Apostolate
               </p>
             </div>
-
           </div>
         </div>
       </div>

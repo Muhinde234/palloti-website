@@ -52,8 +52,8 @@ export const Header = ({ lang, navigation }: HeaderProps) => {
   return (
     <>
       {/* TOP BAR */}
-      <div className="w-full bg-[var(--red)] text-white hidden md:block">
-        <div className="container mx-auto px-4 md:px-6 py-2 flex items-center justify-between gap-4 text-[11px] font-medium">
+      <div className="w-full text-white hidden md:block" style={{ background: "linear-gradient(135deg, rgba(62,32,9,1) 0%, rgba(92,51,23,0.97) 50%, rgba(122,69,32,0.95) 100%)" }}>
+        <div className="container mx-auto px-4 md:px-6 py-2 flex items-center justify-between gap-4 text-xs font-medium">
 
           {/* Left: address + phones */}
           <div className="flex items-center gap-5">
@@ -107,11 +107,11 @@ export const Header = ({ lang, navigation }: HeaderProps) => {
                 <Image src="/p4.png" alt="Logo" fill className="object-contain" priority />
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-base md:text-lg leading-none text-[var(--red)]"
+                <span className="font-bold text-base md:text-xl leading-none text-[var(--red)]"
                   style={{ fontFamily: "Georgia, serif" }}>
                   SAC Holy Family Province
                 </span>
-                <span className="text-[9px] md:text-[11px] font-bold tracking-[0.15em] uppercase text-[var(--gold)] mt-1">
+                <span className="text-xs font-bold tracking-[0.15em] uppercase text-[var(--gold)] mt-1">
                   Societas Apostolatus Catholici
                 </span>
               </div>
@@ -124,7 +124,7 @@ export const Header = ({ lang, navigation }: HeaderProps) => {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "relative py-2 text-[13px] font-bold uppercase tracking-wider transition-colors hover:text-[var(--gold)]",
+                    "relative py-2 text-sm font-bold uppercase tracking-wider transition-colors hover:text-[var(--gold)]",
                     pathname === link.href ? "text-[var(--red)]" : "text-gray-700"
                   )}
                 >

@@ -1,34 +1,53 @@
 @import "tailwindcss";
 
 :root {
-  --red:    #5C3317;   /* rich brown — authority */
-  --red-dk: #3E2009;   /* dark brown — hover/depth */
-  --red-lt: #7A4520;   /* lighter brown — subtle accents */
-  --gold:   #D4A843;   /* warm luminous gold */
-  --gold-lt:#E8B84B;   /* bright gold — hover glow */
-  --gold-dk:#B8922E;   /* deep gold — pressed states */
-  --cream:  #FDFCFB;   /* near-white warm base */
-  --cream2: #F5EFE6;   /* warm parchment — visible tier */
-  --dark:   #1C1917;   /* warm black — deep text/bg */
-  --mid:    #44403C;   /* warm charcoal — body text */
-  --gray:   #78716C;   /* warm stone — muted text */
+  /* ── Brand Browns ── */
+  --red:    #5C3317;   /* rich espresso brown — authority */
+  --red-dk: #3A1F0A;   /* deep roast — hover/depth */
+  --red-lt: #8B5230;   /* warm sienna — subtle accents */
+
+  /* ── Brand Golds ── */
+  --gold:   #C9952A;   /* deep amber gold — primary accent */
+  --gold-lt:#E8B84B;   /* bright honey — hover glow */
+  --gold-dk:#A67820;   /* antique gold — pressed states */
+
+  /* ── Surfaces ── */
+  --cream:  #FDFAF6;   /* warm ivory — page base */
+  --cream2: #F2E8D9;   /* parchment — card tiers */
+  --cream3: #EAD9C0;   /* deeper parchment — borders/dividers */
+
+  /* ── Text ── */
+  --dark:   #1A1410;   /* warm near-black — headings */
+  --mid:    #3D3530;   /* warm charcoal — body text */
+  --gray:   #6B5F57;   /* warm taupe — muted/secondary text */
+
   --white:  #FFFFFF;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
 
 body {
-  background: var(--white);
+  background: var(--cream);
   color: var(--dark);
   font-family: var(--font-mulish), "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
+  line-height: 1.75;
+}
+
+p {
+  font-size: 1rem;     /* 18px — always readable */
+  line-height: 1.8;
+  color: var(--mid);
 }
 
 /* ── Eyebrow / Badge ── */
 .badge {
   display: inline-block;
-  font-size: 0.68rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -38,10 +57,10 @@ body {
 /* ── Section titles — serif, editorial ── */
 .section-title {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  font-size: clamp(2.1rem, 4.5vw, 3.2rem);
   font-weight: 700;
   color: var(--red);
-  line-height: 1.15;
+  line-height: 1.12;
 }
 
 /* ── Gold rule divider ── */
@@ -55,24 +74,24 @@ body {
 /* ── Cards ── */
 .card {
   background: var(--white);
-  border: 1px solid #e8e2d9;
+  border: 1px solid var(--cream3);
   overflow: hidden;
   transition: transform 0.3s cubic-bezier(0.22,1,0.36,1),
               box-shadow 0.3s cubic-bezier(0.22,1,0.36,1);
 }
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(92,51,23,0.18);
+  box-shadow: 0 20px 50px rgba(58,31,10,0.16);
 }
 
 /* ── Read-more link ── */
 .read-more {
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--red);
-  transition: color 0.2s, gap 0.2s;
+  transition: color 0.2s;
 }
 .read-more:hover { color: var(--gold); }
 
@@ -81,10 +100,10 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.95rem 2.4rem;
+  padding: 1rem 2.6rem;
   background: var(--gold);
   color: var(--dark);
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -95,7 +114,7 @@ body {
   background: var(--gold-lt);
   color: var(--dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(212,168,67,0.4);
+  box-shadow: 0 8px 28px rgba(201,149,42,0.45);
 }
 
 /* ── Outline button ── */
@@ -103,10 +122,10 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.9rem 2.2rem;
-  border: 2px solid rgba(255,255,255,0.5);
+  padding: 0.95rem 2.4rem;
+  border: 2px solid rgba(255,255,255,0.55);
   color: var(--white);
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -137,7 +156,7 @@ body {
 /* ── Nav links ── */
 .nav-link {
   position: relative;
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -160,7 +179,7 @@ body {
 .page-banner {
   position: relative;
   padding: 5rem 0 4rem;
-  background: linear-gradient(135deg, var(--red-dk) 0%, var(--red) 100%);
+  background: linear-gradient(135deg, rgba(62,32,9,1) 0%, rgba(92,51,23,0.97) 50%, rgba(122,69,32,0.95) 100%);
   overflow: hidden;
   text-align: center;
   color: var(--white);
@@ -188,27 +207,27 @@ body {
 }
 .page-banner h1 {
   font-family: Georgia, serif;
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(2.2rem, 5.5vw, 3.6rem);
   font-weight: 700;
   margin-top: 0.5rem;
-  line-height: 1.15;
+  line-height: 1.12;
 }
 .page-banner .subtitle {
   margin-top: 0.75rem;
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.65);
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.7);
   letter-spacing: 0.08em;
 }
 
 /* ── Mobile nav ── */
 .mobile-nav-link {
   display: block;
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--dark);
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1.1rem;
   transition: background 0.2s, color 0.2s;
 }
 .mobile-nav-link:hover {

@@ -109,10 +109,7 @@ export default function HeroSlider({
           {/* Gradient overlay */}
           <div
             className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(to top, rgba(28,15,5,0.92) 0%, rgba(28,15,5,0.55) 50%, rgba(28,15,5,0.2) 100%)",
-            }}
+            style={{ background: "rgba(28,15,5,0.25)" }}
           />
         </div>
       ))}

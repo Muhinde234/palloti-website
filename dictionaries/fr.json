@@ -142,25 +142,201 @@
   "communities": {
     "badge": "Notre Présence",
     "title": "Communautés et Œuvres",
-    "subtitle": "Au service du peuple de Dieu à travers le Rwanda",
+    "subtitle": "Au service du peuple de Dieu au Rwanda, en R.D.Congo, en Belgique et au-delà",
+    "filterLabels": {
+      "all": "Toutes",
+      "rwanda": "Rwanda",
+      "drc": "R.D.Congo",
+      "belgium": "Belgique",
+      "mission": "Missions Hors Province",
+      "members": "Membres de la Communauté",
+      "works": "Œuvres",
+      "viewDetails": "Voir les Membres",
+      "hideDetails": "Masquer les Membres"
+    },
     "items": [
       {
-        "name": "Communauté de Kigali",
-        "location": "Kigali, Rwanda",
-        "description": "Notre maison provinciale et centre de formation, au service de la communauté urbaine par le travail pastoral, l'éducation et l'action sociale.",
-        "works": ["Ministère Paroissial", "Formation des Jeunes", "Services Sociaux"]
+        "id": "gikondo",
+        "name": "Communauté Sainte Famille de Gikondo",
+        "location": "Kigali-Gikondo, Rwanda",
+        "region": "rwanda",
+        "image": "/images/gikondo.jpg",
+        "description": "Maison Provinciale et Maison Mère de la Province Sainte Famille. Siège du gouvernement et de l'administration provinciale, abritant la Paroisse Saint Vincent Pallotti, le Centre Saint Vincent Pallotti, le bureau de la Caritas Pallottine et la Fondation Pallottine pour la Famille.",
+        "works": ["Gouvernement Provincial", "Paroisse St. Vincent Pallotti", "Centre St. Vincent Pallotti Ltd", "Caritas Pallottine", "Fondation Pallottine pour la Famille"],
+        "memberSummary": "La Communauté Sainte Famille de Gikondo est nommée ainsi parce qu'elle est le siège de la Province Missionnaire Sainte Famille, qui s'étend sur le territoire du Rwanda, de la R.D.Congo et de la Belgique. Elle est souvent appelée la 'Maison Mère' ou 'Maison Provinciale'. Elle est au service de trois œuvres principales : les services généraux du gouvernement et de l'administration provinciale, la Paroisse Saint Vincent Pallotti de Gikondo et le Centre Saint Vincent Pallotti/Gikondo. Elle héberge également le bureau de la Caritas Pallottine et de la Fondation Pallottine pour la Famille. Elle est composée de 10 prêtres, 2 frères, 1 diacre et 1 séminariste en stage.",
+        "members": [
+          { "name": "P. Eugène NIYONZIMA", "role": "Recteur Provincial" },
+          { "name": "P. Jean de Dieu KASEREKA KANEFU", "role": "Recteur de la Communauté, Directeur du Centre Saint Vincent Pallotti Ltd, Chargé d'audit interne" },
+          { "name": "P. Jean Pierre NSABIMANA", "role": "Vice-Recteur, Curé de la Paroisse de Gikondo, Secrétaire Provincial pour les Missions, Coordinateur du Département Socio-Caritatif de la FPF" },
+          { "name": "P. Jackson NIYONSENGA BANZUBAZE", "role": "Administrateur Provincial" },
+          { "name": "P. Patrick NSANZAMAHORO", "role": "Secrétaire Provincial, Secrétaire du Recteur Provincial, Cérémoniaire Provincial adjoint, Vicaire Dominical" },
+          { "name": "Fr. Jean-Marie Vianney NGENDAHIMANA", "role": "Notaire, Archiviste, Directeur de la F.P.F." },
+          { "name": "P. Patient KATEMBO KIOMA", "role": "Econome de la Communauté, Vicaire Dominical à la Paroisse, Webmaster, 2ème vice-chargé d'ACR" },
+          { "name": "P. Gaspard AYABAGABO", "role": "DAF au Centre Saint Vincent Pallotti Ltd, 2ème Administrateur Provincial Adjoint" },
+          { "name": "P. Andrzej JAKACKI", "role": "Responsable de la Revue 'Communion' au Rwanda, Vicaire Dominical" },
+          { "name": "P. Patient POLEPOLE", "role": "1er Administrateur Provincial Adjoint" },
+          { "name": "P. Pascal HABINEZA", "role": "Résident" },
+          { "name": "Fr. Emmanuel NIYIZURUGERO", "role": "Séminariste en stage annuel" }
+        ]
       },
       {
+        "id": "kabuga",
+        "name": "Communauté Immaculée Conception de Kabuga",
+        "location": "Kabuga, Kigali — Archidiocèse de Kigali",
+        "region": "rwanda",
+        "description": "Nommée en l'honneur de l'Immaculée Conception, cette communauté dessert la Paroisse de Kabuga et abrite le Centre Saint Jean Paul II. Elle est également le siège du Sanctuaire de la Miséricorde Divine de Kabuga et soutient la Fondation Pallottine pour la Famille.",
+        "works": ["Paroisse de Kabuga", "Centre Saint Jean Paul II", "Sanctuaire de la Miséricorde Divine", "Fondation Pallottine pour la Famille", "Animation Vocationnelle"],
+        "memberSummary": "La Communauté Immaculée Conception de Kabuga dessert la Paroisse de Kabuga dans l'Archidiocèse de Kigali. Elle abrite le Centre Saint Jean Paul II et le Sanctuaire de la Miséricorde Divine de Kabuga, et soutient la Fondation Pallottine pour la Famille (FPF).",
+        "members": [
+          { "name": "P. Ildéphonse BIZIMUNGU", "role": "Recteur de la communauté et Curé de la paroisse" },
+          { "name": "P. Alphonse NDAGIJIMANA", "role": "Vice-Recteur de la communauté et Recteur du Sanctuaire de la Miséricorde Divine de Kabuga" },
+          { "name": "P. Gilbert KAZINGUFU SEMASAKA", "role": "Chapelain au Sanctuaire, Vice-Directeur de la FPF, Coordinateur du Département Famille et Vie de la FPF, Vicaire dominical à la paroisse" },
+          { "name": "P. Germain BOSENIKO KAMARA", "role": "DAF de la FPF, 2ème vicaire à la paroisse, Chargé de l'animation vocationnelle à Kabuga" },
+          { "name": "P. Jean-Delphin NYONGERA", "role": "Econome de la communauté et 1er vicaire à la paroisse" }
+        ]
+      },
+      {
+        "id": "ruhango",
+        "name": "Communauté de Ruhango",
+        "location": "Ruhango — Diocèse de Kabgayi",
+        "region": "rwanda",
+        "description": "Au service du Diocèse de Kabgayi, cette communauté dessert la Paroisse de Ruhango et abrite le Sanctuaire Jésus Miséricordieux, qui comprend une chapelle d'adoration perpétuelle et des rassemblements de prière de guérison.",
+        "works": ["Paroisse de Ruhango", "Sanctuaire Jésus Miséricordieux", "Chapelle d'Adoration Perpétuelle", "Prière de Guérison", "Animation ACR", "Animation Vocationnelle"],
+        "memberSummary": "La Communauté de Ruhango dessert la Paroisse de Ruhango dans le Diocèse de Kabgayi. Elle abrite également le Sanctuaire Jésus Miséricordieux, avec une chapelle d'adoration perpétuelle.",
+        "members": [
+          { "name": "P. Jean Marie Vianney NIZEYIMANA", "role": "Recteur de la Communauté et Recteur du Sanctuaire Jésus Miséricordieux" },
+          { "name": "P. Janvier GASORE", "role": "Vice-Recteur de la Communauté et Chapelain au Sanctuaire Jésus Miséricordieux" },
+          { "name": "P. Dominique NGENDAHAYO TUMAINI", "role": "Curé de la Paroisse de Ruhango et Responsable de l'ACR" },
+          { "name": "P. Vincent NDUWAYO BIMENYIMANA", "role": "Econome de la Communauté, Vicaire à la Paroisse, Econome de la Paroisse et Chargé de l'animation vocationnelle à Ruhango" }
+        ]
+      },
+      {
+        "id": "butare",
         "name": "Communauté de Butare",
-        "location": "Huye, Rwanda",
-        "description": "Une communauté dynamique engagée dans l'éducation et le ministère pastoral, travaillant en étroite collaboration avec le diocèse local et les étudiants universitaires.",
-        "works": ["Aumônerie Universitaire", "Enseignement Secondaire", "Centre de Retraite"]
+        "location": "Butare (Huye), Rwanda",
+        "region": "rwanda",
+        "description": "Communauté dynamique dans le Diocèse de Butare, engagée dans le ministère pastoral, l'éducation et l'aumônerie universitaire.",
+        "works": ["Ministère Paroissial", "Aumônerie Universitaire", "Éducation"]
       },
       {
-        "name": "Communauté de Ruhengeri",
-        "location": "Musanze, Rwanda",
-        "description": "Au service de la province du nord par le ministère paroissial, le soutien aux soins de santé et les programmes de développement communautaire.",
-        "works": ["Ministère Paroissial", "Action Sanitaire", "Développement Communautaire"]
+        "id": "kibeho",
+        "name": "Communauté de Kibeho",
+        "location": "Kibeho, Rwanda",
+        "region": "rwanda",
+        "description": "Au service du célèbre sanctuaire marial de Kibeho, accompagnant les pèlerins et les fidèles locaux dans leur cheminement spirituel.",
+        "works": ["Ministère du Sanctuaire", "Accompagnement des Pèlerins", "Travail Pastoral"]
+      },
+      {
+        "id": "kinoni",
+        "name": "Communauté de Kinoni",
+        "location": "Kinoni, Rwanda",
+        "region": "rwanda",
+        "description": "Communauté Pallottine engagée dans le ministère paroissial et le service apostolique dans la région de Kinoni.",
+        "works": ["Ministère Paroissial", "Service Apostolique", "Service Communautaire"]
+      },
+      {
+        "id": "pallotipress",
+        "name": "Palloti Press",
+        "location": "Rwanda",
+        "region": "rwanda",
+        "description": "L'apostolat pallottin de l'édition et des médias, produisant de la littérature catholique, la revue 'Communion' et d'autres supports d'évangélisation.",
+        "works": ["Édition Catholique", "Apostolat des Médias", "Revue 'Communion'"]
+      },
+      {
+        "id": "keshero",
+        "name": "Communauté de Goma-Keshero",
+        "location": "Goma-Keshero, R.D.Congo",
+        "region": "drc",
+        "description": "Communauté Pallottine dans le Diocèse de Goma au service des fidèles de Keshero par le ministère paroissial et les œuvres apostoliques.",
+        "works": ["Ministère Paroissial", "Travail Pastoral", "Service Social"]
+      },
+      {
+        "id": "buturande",
+        "name": "Communauté de Goma-Buturande",
+        "location": "Goma-Buturande, R.D.Congo",
+        "region": "drc",
+        "description": "Au service de la zone de Buturande à Goma par la pastorale et l'apostolat communautaire dans le Diocèse de Goma.",
+        "works": ["Ministère Paroissial", "Apostolat Communautaire", "Soin Pastoral"]
+      },
+      {
+        "id": "karhale",
+        "name": "Communauté de Bukavu-Karhale",
+        "location": "Bukavu-Karhale, R.D.Congo",
+        "region": "drc",
+        "description": "Communauté Pallottine dans l'Archidiocèse de Bukavu, au service de la zone de Karhale par le ministère paroissial et les œuvres sociales.",
+        "works": ["Ministère Paroissial", "Œuvres Sociales", "Service Pastoral"]
+      },
+      {
+        "id": "formation-drc",
+        "name": "Maison de Formation St. Vincent Pallotti",
+        "location": "R.D.Congo",
+        "region": "drc",
+        "description": "La maison de formation pallottine en R.D.Congo, accompagnant les candidats et séminaristes dans leur formation spirituelle et intellectuelle.",
+        "works": ["Formation Sacerdotale", "Direction Spirituelle", "Études Académiques"]
+      },
+      {
+        "id": "brussels",
+        "name": "Communauté de Bruxelles",
+        "location": "Bruxelles, Belgique",
+        "region": "belgium",
+        "description": "La première communauté Pallottine établie en Belgique en 1986, au service de l'Église locale et de la communauté africaine de la diaspora.",
+        "works": ["Ministère Paroissial", "Pastorale de la Diaspora", "Œuvres Apostoliques"]
+      },
+      {
+        "id": "namur",
+        "name": "Communauté de Namur",
+        "location": "Namur, Belgique",
+        "region": "belgium",
+        "description": "Communauté Pallottine à Namur au service de l'Église locale par le ministère pastoral et l'engagement apostolique.",
+        "works": ["Ministère Paroissial", "Travail Pastoral", "Service Apostolique"]
+      },
+      {
+        "id": "italy",
+        "name": "Mission en Italie",
+        "location": "Italie",
+        "region": "mission",
+        "description": "Confrères Pallottins de la Province Sainte Famille en service en Italie, patrie de Saint Vincent Pallotti.",
+        "works": ["Ministère Paroissial", "Service Apostolique"]
+      },
+      {
+        "id": "france",
+        "name": "Mission en France",
+        "location": "France",
+        "region": "mission",
+        "description": "Confrères de la Province Sainte Famille engagés dans le ministère pastoral et apostolique en France.",
+        "works": ["Ministère Paroissial", "Travail Pastoral"]
+      },
+      {
+        "id": "poland",
+        "name": "Mission en Pologne",
+        "location": "Pologne",
+        "region": "mission",
+        "description": "Confrères en service en Pologne, province d'origine des premiers missionnaires Pallottins au Rwanda.",
+        "works": ["Ministère Paroissial", "Soutien à la Formation"]
+      },
+      {
+        "id": "nairobi",
+        "name": "Mission à Nairobi",
+        "location": "Nairobi, Kenya",
+        "region": "mission",
+        "description": "Confrères Pallottins de la Province Sainte Famille en service à Nairobi, Kenya.",
+        "works": ["Ministère Paroissial", "Service Apostolique"]
+      },
+      {
+        "id": "ivory-coast",
+        "name": "Mission en Côte d'Ivoire",
+        "location": "Côte d'Ivoire",
+        "region": "mission",
+        "description": "Confrères de la Province Sainte Famille engagés dans le ministère apostolique en Côte d'Ivoire.",
+        "works": ["Ministère Paroissial", "Œuvre Apostolique"]
+      },
+      {
+        "id": "cameroon",
+        "name": "Mission au Cameroun",
+        "location": "Cameroun",
+        "region": "mission",
+        "description": "En service au Cameroun, terre où la mission Pallottine en Afrique a commencé en 1890.",
+        "works": ["Ministère Paroissial", "Mission Historique"]
       }
     ]
   },
