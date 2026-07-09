@@ -54,11 +54,10 @@ export default async function DirectionPage({ params }: { params: Promise<{ lang
                     style={{ background: "linear-gradient(to top, rgba(139,26,26,0.7) 0%, transparent 60%)" }} />
                 </div>
                 <div className="p-5">
-                  <p className="text-xs font-bold uppercase tracking-widest mb-1 text-[var(--gold)]">
+                  <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: "var(--gold)" }}>
                     {member.role}
                   </p>
-                  <h3 className="text-sm font-bold leading-snug text-[var(--gold)]"
-                    style={{ fontFamily: "Georgia, serif" }}>
+                  <h3 className="text-sm font-bold leading-snug" style={{ fontFamily: "Georgia, serif", color: "var(--dark)" }}>
                     {member.name}
                   </h3>
                 </div>

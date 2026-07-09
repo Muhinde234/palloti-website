@@ -3,12 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
+import { Landmark, Users, Globe } from "lucide-react";
 
 type Slide = {
   image: string;
   location: string;
   title: string;
   subtitle?: string;
+  titleGold?: boolean;
+  subtitleGold?: boolean;
 };
 
 const slides: Slide[] = [
@@ -21,7 +24,7 @@ const slides: Slide[] = [
     image: "/images/hero2.jpg",
     location: "Kibeho — Rwanda",
     title: "La Nouvelle Communauté de Kibeho",
-    subtitle: "La Nouvelle Communauté de Kibeho",
+    titleGold: true,
   },
   {
     image: "/images/hero3.jpeg",
@@ -33,12 +36,14 @@ const slides: Slide[] = [
     location: "PSF Province",
     title: "Pallottins de la PSF",
     subtitle: "Venez et rebâtissons les murailles de Jérusalem.",
+    subtitleGold: true,
   },
   {
     image: "/images/hero5.jpg",
     location: "Kabuga — Rwanda",
     title: "Centre Pallottin de formation Genezareth",
     subtitle: "Keshero - R D Congo",
+    subtitleGold: true,
   },
 ];
 
@@ -140,11 +145,12 @@ export default function HeroSlider({
 
               {/* Title */}
               <h1
-                className="text-white font-bold leading-tight mb-3 max-w-3xl"
+                className="font-bold leading-tight mb-3 max-w-3xl"
                 style={{
                   fontFamily: "Georgia, serif",
                   fontSize: "clamp(1.8rem, 4.5vw, 3.8rem)",
                   textShadow: "0 2px 20px rgba(0,0,0,0.4)",
+                  color: slide.titleGold ? "var(--gold)" : "#ffffff",
                 }}
               >
                 {slide.title}
@@ -152,8 +158,8 @@ export default function HeroSlider({
 
               {/* Subtitle */}
               {slide.subtitle && (
-                <p className="text-white/80 font-light italic mb-6 max-w-xl"
-                  style={{ fontSize: "clamp(0.9rem, 1.5vw, 1.1rem)" }}>
+                <p className="font-light italic mb-6 max-w-xl"
+                  style={{ fontSize: "clamp(0.9rem, 1.5vw, 1.1rem)", color: slide.subtitleGold ? "var(--gold)" : "rgba(255,255,255,0.8)" }}>
                   {slide.subtitle}
                 </p>
               )}
@@ -225,24 +231,29 @@ export default function HeroSlider({
       </div>
 
       {/* Stats bar */}
-      <div className="absolute bottom-0 left-0 right-0 z-20 bg-[var(--dark)]/80 backdrop-blur-sm border-t border-white/10">
+      <div className="absolute bottom-0 left-0 right-0 z-20" style={{ background: "linear-gradient(135deg, rgba(62,32,9,0.97) 0%, rgba(92,51,23,0.95) 50%, rgba(122,69,32,0.93) 100%)" }}>
+        <div className="h-px w-full" style={{ background: "var(--gold)" }} />
         <div className="container mx-auto px-4 md:px-14 lg:px-20">
           <div className="grid grid-cols-3 divide-x divide-white/10">
             {[
-              { num: "1890", label: statFounded, icon: "🏛" },
-              { num: "111+", label: statMembers, icon: "👥" },
-              { num: "3",    label: statCountries, icon: "🌍" },
+              { num: "1890", label: statFounded,   Icon: Landmark, color: "#C9952A" },
+              { num: "111+", label: statMembers,   Icon: Users,    color: "#E8B84B" },
+              { num: "3",    label: statCountries, Icon: Globe,    color: "#C9952A" },
             ].map((s, i) => (
-              <div key={i} className="py-2 sm:py-3 px-2 sm:px-4 md:px-8 flex items-center justify-center gap-1.5 sm:gap-3">
-                <span className="text-base sm:text-lg opacity-40 hidden sm:block">{s.icon}</span>
+              <div key={i} className="py-3 sm:py-4 px-2 sm:px-4 md:px-8 flex items-center justify-center gap-2 sm:gap-4 group">
+                {/* Icon box */}
+                <div className="hidden sm:flex items-center justify-center w-9 h-9 md:w-11 md:h-11 rounded-lg shrink-0"
+                  style={{ background: "rgba(201,149,42,0.15)", border: "1px solid rgba(201,149,42,0.35)" }}>
+                  <s.Icon size={18} style={{ color: s.color }} strokeWidth={1.8} />
+                </div>
+                {/* Text */}
                 <div className="text-left">
-                  <span
-                    className="text-base sm:text-[1.2rem] md:text-[1.4rem] font-black text-[var(--gold)] block leading-none"
-                    style={{ fontFamily: "Georgia, serif" }}
-                  >
+                  <span className="block font-black leading-none" style={{ fontFamily: "Georgia, serif", fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", color: s.color }}>
                     {s.num}
                   </span>
-                  <span className="text-[7px] sm:text-[8px] uppercase tracking-[0.1em] sm:tracking-[0.15em]" style={{ color: "#ffffff" }}>{s.label}</span>
+                  <span className="block uppercase tracking-[0.15em] font-semibold mt-0.5" style={{ fontSize: "clamp(0.55rem, 1vw, 0.7rem)", color: "rgba(255,255,255,0.85)" }}>
+                    {s.label}
+                  </span>
                 </div>
               </div>
             ))}

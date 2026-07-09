@@ -35,19 +35,23 @@ export default async function IdentityPage({ params }: { params: Promise<{ lang:
                 <Image src="/founder.png" alt="Saint Vincent Pallotti" width={380} height={480}
                   className="w-full object-cover" />
               </div>
-              <blockquote className="w-full max-w-sm rounded-lg p-6 text-center italic bg-[var(--red)] text-[var(--white)]">
+              <blockquote className="w-full max-w-sm rounded-lg p-6 text-center italic bg-[var(--red)]"
+                style={{ color: "#ffffff" }}>
                 <p className="text-lg mb-2">&ldquo;{founder.quote}&rdquo;</p>
-                <footer className="text-sm font-semibold text-[var(--gold)]">{founder.quoteAuthor}</footer>
+                <footer className="text-sm font-semibold" style={{ color: "var(--gold)" }}>{founder.quoteAuthor}</footer>
               </blockquote>
             </div>
 
             {/* Biography */}
             <div className="lg:col-span-3 space-y-5">
+              <h2 className="font-bold mb-4" style={{ fontFamily: "Georgia, serif", fontSize: "clamp(1.6rem, 3vw, 2.2rem)", color: "var(--red)" }}>
+                {founder.title}
+              </h2>
               {founder.biography.map((paragraph: string, index: number) => (
-                <p key={index} className="leading-relaxed text-[var(--mid)]" style={{ fontSize: "1.05rem" }}>
+                <p key={index} className="leading-relaxed" style={{ fontSize: "1.05rem", color: "var(--mid)" }}>
                   {index === 0 && (
-                    <span className="float-left text-6xl font-bold mr-3 leading-none text-[var(--red)]"
-                      style={{ fontFamily: "Georgia, serif" }}>
+                    <span className="float-left text-6xl font-bold mr-3 leading-none"
+                      style={{ fontFamily: "Georgia, serif", color: "var(--red)" }}>
                       {paragraph[0]}
                     </span>
                   )}
@@ -82,10 +86,10 @@ export default async function IdentityPage({ params }: { params: Promise<{ lang:
             {/* Text */}
             <div className="space-y-5">
               {charisma.paragraphs.map((paragraph: string, index: number) => (
-                <p key={index} className="leading-relaxed text-[var(--mid)]" style={{ fontSize: "1.02rem" }}>
+                <p key={index} className="leading-relaxed" style={{ fontSize: "1.02rem", color: "var(--mid)" }}>
                   {index === 0 && (
-                    <span className="float-left text-6xl font-bold mr-3 leading-none text-[var(--red)]"
-                      style={{ fontFamily: "Georgia, serif" }}>
+                    <span className="float-left text-6xl font-bold mr-3 leading-none"
+                      style={{ fontFamily: "Georgia, serif", color: "var(--red)" }}>
                       {paragraph[0]}
                     </span>
                   )}

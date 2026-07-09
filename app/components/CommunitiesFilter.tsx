@@ -55,7 +55,7 @@ export default function CommunitiesFilter({ communities, labels }: Props) {
             className="flex items-center gap-2 px-3 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200"
             style={
               active === r
-                ? { background: "var(--red)", color: "var(--white)", boxShadow: "0 4px 14px rgba(92,51,23,0.3)" }
+                ? { background: "var(--red)", color: "#ffffff", boxShadow: "0 4px 14px rgba(92,51,23,0.3)" }
                 : { background: "var(--cream2)", color: "var(--mid)", border: "1px solid #e5e0d8" }
             }
           >
@@ -64,8 +64,8 @@ export default function CommunitiesFilter({ communities, labels }: Props) {
               className="text-[11px] font-black px-1.5 py-0.5 rounded-full"
               style={
                 active === r
-                  ? { background: "rgba(255,255,255,0.2)", color: "var(--white)" }
-                  : { background: "var(--red)", color: "var(--white)" }
+                  ? { background: "rgba(255,255,255,0.2)", color: "#ffffff" }
+                  : { background: "var(--red)", color: "#ffffff" }
               }
             >
               {counts[r]}
@@ -111,7 +111,7 @@ export default function CommunitiesFilter({ communities, labels }: Props) {
                 {!community.image && (
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center text-base font-bold mb-4"
-                    style={{ background: "var(--red)", color: "var(--white)", fontFamily: "Georgia, serif" }}
+                    style={{ background: "var(--red)", color: "#ffffff", fontFamily: "Georgia, serif" }}
                   >
                     {index + 1}
                   </div>
@@ -143,7 +143,7 @@ export default function CommunitiesFilter({ communities, labels }: Props) {
                   ))}
                 </div>
 
-                {/* Expand button — only if has members */}
+                {/* Expand button */}
                 {community.members && community.members.length > 0 && (
                   <button
                     onClick={() => setExpanded(isOpen ? null : community.id)}
@@ -174,11 +174,11 @@ export default function CommunitiesFilter({ communities, labels }: Props) {
                       <div
                         key={i}
                         className="flex items-start gap-3 p-3 rounded-lg"
-                        style={{ background: "var(--white)", border: "1px solid var(--cream3)" }}
+                        style={{ background: "#ffffff", border: "1px solid var(--cream3)" }}
                       >
                         <div
                           className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5"
-                          style={{ background: "var(--red)", color: "var(--white)" }}
+                          style={{ background: "var(--red)", color: "#ffffff" }}
                         >
                           {i + 1}
                         </div>

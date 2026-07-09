@@ -210,7 +210,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
         <FadeUp className="relative z-10 container mx-auto px-6 text-center max-w-4xl">
           <div className="flex justify-center mb-8">
-            <Image src="/images/p3.png" alt="" width={56} height={56} className="object-contain opacity-40" />
+            
           </div>
           <div className="flex items-center justify-center gap-5 mb-10">
             <div className="w-16 h-px bg-[var(--gold)]/50" />
@@ -220,16 +220,11 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             <div className="w-16 h-px bg-[var(--gold)]/50" />
           </div>
           <blockquote className="text-white font-light italic leading-[1.4] mb-10"
-            style={{ fontFamily: "Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)" }}>
+            style={{ fontSize: "clamp(1.6rem, 4vw, 3rem)" }}>
             &ldquo;{dict.home.missionQuote}&rdquo;
           </blockquote>
-          <div className="flex items-center justify-center gap-4 mb-12">
-            <div className="w-10 h-px bg-[var(--gold)]" />
-            <p className="text-[var(--gold)] font-bold text-sm tracking-[0.3em] uppercase">
-              {dict.home.missionAuthor}
-            </p>
-            <div className="w-10 h-px bg-[var(--gold)]" />
-          </div>
+         
+         
           <Link href={`/${lang}/identity`} className="btn-outline">{dict.home.ctaPrimary}</Link>
         </FadeUp>
       </section>

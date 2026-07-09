@@ -26,13 +26,13 @@ export const NewsSection = ({ title, articles, readMore }: NewsSectionProps) => 
                 <Image src={article.imageUrl} alt={article.title} fill className="object-cover transition-transform duration-500 hover:scale-105" />
               </div>
               <div className="p-6">
-                <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "#C9A84C", fontFamily: "Arial, sans-serif" }}>
+                <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "var(--gold)" }}>
                   {article.date}
                 </p>
-                <h3 className="text-base font-bold mb-3 leading-snug" style={{ color: "#1C1C1C", fontFamily: "Georgia, serif", minHeight: "3rem" }}>
+                <h3 className="text-base font-bold mb-3 leading-snug" style={{ color: "var(--dark)", fontFamily: "Georgia, serif", minHeight: "3rem" }}>
                   {article.title}
                 </h3>
-                <p className="text-sm leading-relaxed mb-5" style={{ color: "#6B7280", minHeight: "4rem" }}>
+                <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--gray)", minHeight: "4rem" }}>
                   {article.summary}
                 </p>
                 <Link href={`/news/${article.id}`} className="read-more">

@@ -42,8 +42,8 @@ export default async function HistoryPage({ params }: { params: Promise<{ lang: 
                     <div className="relative rounded-xl overflow-hidden border-[3px] border-[var(--gold)]"
                       style={{ height: 320, boxShadow: "0 12px 40px rgba(139,26,26,0.12)" }}>
                       <Image src={chapter.image} alt={`History ${index + 1}`} fill className="object-cover" />
-                      <div className="absolute top-4 left-4 px-4 py-2 rounded-full text-[var(--white)] font-bold text-sm bg-[var(--red)]"
-                        style={{ fontFamily: "Georgia, serif" }}>
+                      <div className="absolute top-4 left-4 px-4 py-2 rounded-full font-bold text-sm bg-[var(--red)]"
+                        style={{ fontFamily: "Georgia, serif", color: "#ffffff" }}>
                         {chapter.year}
                       </div>
                     </div>
@@ -68,20 +68,20 @@ export default async function HistoryPage({ params }: { params: Promise<{ lang: 
           })}
 
           {/* Stats banner */}
-          <div className="mt-20 rounded-2xl p-10 text-center text-[var(--white)] bg-[var(--red)]">
+          <div className="mt-20 rounded-2xl p-10 text-center bg-[var(--red)]" style={{ color: "#ffffff" }}>
             <p className="badge mb-4">
               {lang === "fr" ? "Province Sainte Famille · SAC" : "Holy Family Province · SAC"}
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-6 ">
               {[
                 { number: "1890", label: lang === "fr" ? "Début de la mission" : "Mission began" },
                 { number: "111",  label: lang === "fr" ? "Membres" : "Members" },
                 { number: "3",    label: lang === "fr" ? "Pays" : "Countries" },
               ].map((stat, i) => (
                 <div key={i}>
-                  <p className="text-5xl font-bold mb-1 text-[var(--gold)]"
-                    style={{ fontFamily: "Georgia, serif" }}>{stat.number}</p>
-                  <p className="text-sm uppercase tracking-widest text-white/70">{stat.label}</p>
+                  <p className="font-bold mb-1"
+                    style={{ fontFamily: "Georgia, serif", color: "var(--gold)", fontSize: "clamp(2rem, 3.5vw, 3rem)" }}>{stat.number}</p>
+                  <p className="text-sm uppercase tracking-widest" style={{ color: "#ffffff" }}>{stat.label}</p>
                 </div>
               ))}
             </div>
