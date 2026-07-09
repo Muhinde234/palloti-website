@@ -2,7 +2,7 @@ import { MapPin, Phone } from "lucide-react";
 
 export function TopBar() {
   return (
-    <div className="sticky top-0 z-[110] w-full bg-gradient-to-r from-[#3e2009] via-[#5c3317] to-[#7a4520] text-white">
+    <div className="w-full bg-gradient-to-r from-[#3e2009] via-[#5c3317] to-[#7a4520] text-white">
       <div className="container mx-auto px-4 md:px-6 py-1.5 flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-4 text-xs font-medium">
 
         <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-1">

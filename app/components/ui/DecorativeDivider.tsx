@@ -4,7 +4,7 @@ export default function DecorativeDivider() {
       <style>{`
         .decorative-divider {
           position: sticky;
-          top: var(--header-h, 72px);
+          top: 56px;
           z-index: 98;
           width: 100%;
           height: 28px;

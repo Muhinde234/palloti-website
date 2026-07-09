@@ -56,7 +56,7 @@ export const Header = ({ lang, navigation }: HeaderProps) => {
 
       <header
         className={cn(
-          "sticky top-8 z-[100] w-full h-14 transition-all duration-300",
+          "sticky top-0 z-[100] w-full h-14 transition-all duration-300",
           scrolled ? "bg-white/90 backdrop-blur-md shadow-md" : "bg-white"
         )}
       >
