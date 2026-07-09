@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/Footer";
 import { getDictionary } from "@/lib/getDictionary";
+import DecorativeDivider from "../../components/ui/DecorativeDivider";
 
 export default async function IdentityPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
@@ -12,6 +13,7 @@ export default async function IdentityPage({ params }: { params: Promise<{ lang:
   return (
     <>
       <Header lang={lang} navigation={dict.navigation} />
+      <DecorativeDivider />
 
       <div className="page-banner">
         <div className="container mx-auto px-6">
@@ -22,9 +24,9 @@ export default async function IdentityPage({ params }: { params: Promise<{ lang:
       </div>
 
       {/* FOUNDER */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+      <section className="py-12 md:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 items-start">
 
             {/* Photo + quote */}
             <div className="lg:col-span-2 flex flex-col items-center gap-6">
@@ -58,20 +60,20 @@ export default async function IdentityPage({ params }: { params: Promise<{ lang:
       </section>
 
       {/* CHARISMA */}
-      <section className="py-20 bg-[var(--cream)]">
-        <div className="container mx-auto px-6">
+      <section className="py-12 md:py-20 bg-[var(--cream)]">
+        <div className="container mx-auto px-4 sm:px-6">
 
-          <div className="text-center mb-14">
+          <div className="text-center mb-10 md:mb-14">
             <p className="badge">{charisma.badge}</p>
             <h2 className="section-title mt-2">{charisma.title}</h2>
             <div className="divider mt-4 mx-auto" />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
 
             {/* Image */}
             <div className="relative rounded-xl overflow-hidden border-[3px] border-[var(--gold)]"
-              style={{ height: 420, boxShadow: "0 12px 40px rgba(139,26,26,0.12)" }}>
+              style={{ height: 280, boxShadow: "0 12px 40px rgba(139,26,26,0.12)" }}>
               <Image src={charisma.image} alt="Charisma" fill className="object-cover" />
               <div className="absolute inset-0"
                 style={{ background: "linear-gradient(to top, rgba(139,26,26,0.35), transparent 60%)" }} />

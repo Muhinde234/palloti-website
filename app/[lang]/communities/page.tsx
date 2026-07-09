@@ -1,6 +1,7 @@
 import { Header } from "../../components/header";
 import { Footer } from "../../components/Footer";
 import { getDictionary } from "@/lib/getDictionary";
+import DecorativeDivider from "../../components/ui/DecorativeDivider";
 import CommunitiesFilter from "../../components/CommunitiesFilter";
 
 export default async function CommunitiesPage({ params }: { params: Promise<{ lang: string }> }) {
@@ -10,6 +11,7 @@ export default async function CommunitiesPage({ params }: { params: Promise<{ la
   return (
     <>
       <Header lang={lang} navigation={dict.navigation} />
+      <DecorativeDivider />
 
       <div className="page-banner">
         <div className="container mx-auto px-6">

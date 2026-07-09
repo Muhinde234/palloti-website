@@ -2,26 +2,29 @@
 
 :root {
   /* ── Brand Browns ── */
-  --red:    #5C3317;   /* rich espresso brown — authority */
-  --red-dk: #3A1F0A;   /* deep roast — hover/depth */
-  --red-lt: #8B5230;   /* warm sienna — subtle accents */
+  --red:    #5C3317;
+  --red-dk: #3A1F0A;
+  --red-lt: #8B5230;
 
   /* ── Brand Golds ── */
-  --gold:   #C9952A;   /* deep amber gold — primary accent */
-  --gold-lt:#E8B84B;   /* bright honey — hover glow */
-  --gold-dk:#A67820;   /* antique gold — pressed states */
+  --gold:   #C9952A;
+  --gold-lt:#E8B84B;
+  --gold-dk:#A67820;
 
   /* ── Surfaces ── */
-  --cream:  #FDFAF6;   /* warm ivory — page base */
-  --cream2: #F2E8D9;   /* parchment — card tiers */
-  --cream3: #EAD9C0;   /* deeper parchment — borders/dividers */
+  --cream:  #FDFAF6;
+  --cream2: #F2E8D9;
+  --cream3: #EAD9C0;
 
   /* ── Text ── */
-  --dark:   #1A1410;   /* warm near-black — headings */
-  --mid:    #3D3530;   /* warm charcoal — body text */
-  --gray:   #6B5F57;   /* warm taupe — muted/secondary text */
+  --dark:   #1A1410;
+  --mid:    #3D3530;
+  --gray:   #6B5F57;
 
   --white:  #FFFFFF;
+
+  /* ── Layout ── */
+  --header-h: 72px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -178,11 +181,14 @@ p {
 /* ── Page banner ── */
 .page-banner {
   position: relative;
-  padding: 5rem 0 4rem;
+  padding: 3rem 0 2.5rem;
   background: linear-gradient(135deg, rgba(62,32,9,1) 0%, rgba(92,51,23,0.97) 50%, rgba(122,69,32,0.95) 100%);
   overflow: hidden;
   text-align: center;
   color: var(--white);
+}
+@media (min-width: 768px) {
+  .page-banner { padding: 5rem 0 4rem; }
 }
 .page-banner::before {
   content: '';
@@ -211,11 +217,12 @@ p {
   font-weight: 700;
   margin-top: 0.5rem;
   line-height: 1.12;
+  color: #ffffff;
 }
 .page-banner .subtitle {
   margin-top: 0.75rem;
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.7);
+  color: #ffffff;
   letter-spacing: 0.08em;
 }
 

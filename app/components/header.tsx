@@ -52,21 +52,21 @@ export const Header = ({ lang, navigation }: HeaderProps) => {
   return (
     <>
       {/* TOP BAR */}
-      <div className="w-full text-white hidden md:block" style={{ background: "linear-gradient(135deg, rgba(62,32,9,1) 0%, rgba(92,51,23,0.97) 50%, rgba(122,69,32,0.95) 100%)" }}>
-        <div className="container mx-auto px-4 md:px-6 py-2 flex items-center justify-between gap-4 text-xs font-medium">
+      <div className="w-full text-white" style={{ background: "linear-gradient(135deg, rgba(62,32,9,1) 0%, rgba(92,51,23,0.97) 50%, rgba(122,69,32,0.95) 100%)" }}>
+        <div className="container mx-auto px-4 md:px-6 py-2 flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-4 text-xs font-medium">
 
           {/* Left: address + phones */}
-          <div className="flex items-center gap-5">
-            <div className="flex items-center gap-1.5 text-white/90">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-1">
+            <div className="flex items-center gap-1.5" style={{ color: "#ffffff" }}>
               <MapPin size={12} className="text-[var(--gold)] shrink-0" />
               <span>Gikondo – 1083 Kigali, RWANDA</span>
             </div>
-            <span className="text-white/20">|</span>
-            <div className="flex items-center gap-1.5 text-white/90">
+            <span className="hidden sm:block text-white/20">|</span>
+            <div className="flex items-center gap-1.5" style={{ color: "#ffffff" }}>
               <Phone size={12} className="text-[var(--gold)] shrink-0" />
               <span>+250 788 307 271</span>
             </div>
-            <div className="flex items-center gap-1.5 text-white/90">
+            <div className="flex items-center gap-1.5" style={{ color: "#ffffff" }}>
               <Phone size={12} className="text-[var(--gold)] shrink-0" />
               <span>+250 788 381 737</span>
             </div>
@@ -75,27 +75,27 @@ export const Header = ({ lang, navigation }: HeaderProps) => {
           {/* Right: socials */}
           <div className="flex items-center gap-3">
             <a href="https://twitter.com/NiyonzimaEugne1" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1 text-white/80 hover:text-[var(--gold)] transition-colors">
+              className="flex items-center gap-1 hover:text-[var(--gold)] transition-colors" style={{ color: "#ffffff" }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
               </svg>
-              <span>@NiyonzimaEugne1</span>
+              <span className="hidden sm:inline">@NiyonzimaEugne1</span>
             </a>
             <span className="text-white/30">|</span>
             <a href="https://instagram.com/sac-psf" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1 text-white/80 hover:text-[var(--gold)] transition-colors">
+              className="flex items-center gap-1 hover:text-[var(--gold)] transition-colors" style={{ color: "#ffffff" }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/>
                 <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
               </svg>
-              <span>@sac-psf</span>
+              <span className="hidden sm:inline">@sac-psf</span>
             </a>
           </div>
         </div>
       </div>
 
       <header className={cn(
-        "sticky top-0 z-[100] w-full transition-all duration-300 border-b-[3px] border-[var(--red)]",
+        "sticky top-0 z-[100] w-full transition-all duration-300",
         scrolled ? "bg-white/90 backdrop-blur-md shadow-md py-2" : "bg-white py-4"
       )}>
         <div className="container mx-auto px-4 md:px-6">
@@ -125,7 +125,7 @@ export const Header = ({ lang, navigation }: HeaderProps) => {
                   href={link.href}
                   className={cn(
                     "relative py-2 text-sm font-bold uppercase tracking-wider transition-colors hover:text-[var(--gold)]",
-                    pathname === link.href ? "text-[var(--red)]" : "text-gray-700"
+                    pathname === link.href ? "text-[var(--red)]" : "text-[var(--mid)]"
                   )}
                 >
                   {link.label}
@@ -159,24 +159,24 @@ export const Header = ({ lang, navigation }: HeaderProps) => {
 
       {/* MOBILE MENU */}
       <div className={cn(
-        "fixed inset-0 z-[90] bg-white transition-all duration-500 ease-in-out xl:hidden",
+        "fixed inset-0 z-[90] transition-all duration-500 ease-in-out xl:hidden",
         isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-      )}>
+      )} style={{ background: "linear-gradient(135deg, rgba(62,32,9,1) 0%, rgba(92,51,23,0.97) 50%, rgba(122,69,32,0.95) 100%)" }}>
         <div className="flex flex-col h-full pt-28 px-8 gap-6 overflow-y-auto">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                "text-2xl font-serif font-bold border-b border-gray-100 pb-4 transition-all",
-                pathname === link.href ? "text-[var(--red)] translate-x-2" : "text-gray-800"
+                "text-2xl font-serif font-bold border-b border-white/20 pb-4 transition-all",
+                pathname === link.href ? "text-[var(--gold)] translate-x-2" : "text-white"
               )}
             >
               {link.label}
             </Link>
           ))}
           <div className="mt-4 sm:hidden">
-            <p className="text-xs uppercase tracking-widest text-gray-400 mb-4">Select Language</p>
+            <p className="text-xs uppercase tracking-widest text-white/50 mb-4">Select Language</p>
             <LanguageSwitcher />
           </div>
           <div className="mt-auto pb-10 text-center">

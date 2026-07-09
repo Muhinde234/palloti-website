@@ -5,6 +5,7 @@ import { Footer } from "../components/Footer";
 import { getDictionary } from "@/lib/getDictionary";
 import { FadeUp, StaggerContainer, StaggerItem, ParallaxSection } from "../components/motion";
 import HeroSlider from "../components/HeroSlider";
+import DecorativeDivider from "../components/ui/DecorativeDivider";
 
 type NewsItem = { date: string; tags: string; title: string; excerpt: string };
 
@@ -20,6 +21,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       {/* ═══════════════════════════════════════
           § 1  HERO SLIDER
       ═══════════════════════════════════════ */}
+      <DecorativeDivider />
       <HeroSlider
         lang={lang}
         ctaPrimary={dict.home.ctaPrimary}
@@ -32,8 +34,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       {/* ═══════════════════════════════════════
           § 2  RECTOR'S WELCOME
       ═══════════════════════════════════════ */}
-      <section className="py-16 md:py-20  overflow-hidden">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20">
+      <section className="py-12 md:py-16 lg:py-20 overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
           <div className="grid lg:grid-cols-2 gap-10 xl:gap-16 items-start">
 
             {/* Photo */}
@@ -47,11 +49,11 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                   style={{ background: "linear-gradient(to top, rgba(92,51,23,0.85), transparent)" }} />
               </div>
               {/* Floating quote card */}
-              <div className="absolute -bottom-6 right-0 lg:-right-8 bg-[var(--red)] text-white px-5 py-5 shadow-2xl max-w-[240px]">
+              <div className="absolute -bottom-6 right-0 lg:-right-8 bg-[var(--red)] text-white px-4 py-4 shadow-2xl max-w-[200px] sm:max-w-[240px]">
                 <span className="text-3xl font-serif text-[var(--gold)] leading-none block mb-2">&ldquo;</span>
                 <p className="italic text-sm leading-relaxed mb-3" style={{ color: "#ffffff" }}>{dict.home.rectorQuote}</p>
                 <div className="w-8 h-[2px] bg-[var(--gold)] mb-2" />
-                <p className="text-xs font-bold tracking-[0.2em] uppercase text-[var(--gold)]">
+                <p className="text-xs font-bold tracking-[0.2em] uppercase" style={{ color: "var(--gold)" }}>
                   {dict.home.rectorTitle}
                 </p>
                 <p className="font-bold text-sm mt-0.5" style={{ color: "#ffffff", fontFamily: "Georgia, serif" }}>
@@ -80,7 +82,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                   <p className="font-bold text-[var(--red)] text-base" style={{ fontFamily: "Georgia, serif" }}>
                     {dict.home.rectorName}
                   </p>
-                  <p className="text-xs text-[var(--gray)] tracking-[0.1em] uppercase mt-0.5">
+                  <p className="text-xs text-[var(--gold)] tracking-[0.1em] uppercase mt-0.5">
                     {dict.home.rectorTitle}
                   </p>
                 </div>
@@ -93,7 +95,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       {/* ═══════════════════════════════════════
           § 3  IMAGE MOSAIC
       ═══════════════════════════════════════ */}
-      <div className="grid grid-cols-2 md:grid-cols-4 h-[300px] md:h-[440px]"
+      <div className="grid grid-cols-2 md:grid-cols-4 h-[220px] sm:h-[300px] md:h-[440px]"
         style={{ gridTemplateRows: "1fr 1fr" }}>
         <div className="relative col-span-2 row-span-2 overflow-hidden group cursor-pointer">
           <Image src="/images/home2.jpeg" alt="" fill
@@ -112,8 +114,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       {/* ═══════════════════════════════════════
           § 4  NEWS
       ═══════════════════════════════════════ */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20">
+      <section className="py-12 md:py-16 lg:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
 
           <FadeUp>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
@@ -130,7 +132,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             </div>
           </FadeUp>
 
-          <div className="grid lg:grid-cols-[1fr_360px] gap-10">
+          <div className="grid lg:grid-cols-[1fr_320px] xl:grid-cols-[1fr_360px] gap-8 lg:gap-10">
 
             {/* Featured card */}
             <FadeUp>
@@ -193,7 +195,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       {/* ═══════════════════════════════════════
           § 5  PARALLAX QUOTE
       ═══════════════════════════════════════ */}
-      <section className="relative py-24 overflow-hidden mb-0">
+      <section className="relative py-16 md:py-24 overflow-hidden mb-0">
         <ParallaxSection className="absolute inset-0">
           <Image src="/images/home4.jpeg" alt="" fill className="object-cover" />
         </ParallaxSection>

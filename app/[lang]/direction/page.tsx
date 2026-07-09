@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/Footer";
 import { getDictionary } from "@/lib/getDictionary";
+import DecorativeDivider from "../../components/ui/DecorativeDivider";
 
 type Member = { name: string; role: string; image: string };
 
@@ -15,6 +16,7 @@ export default async function DirectionPage({ params }: { params: Promise<{ lang
   return (
     <>
       <Header lang={lang} navigation={dict.navigation} />
+      <DecorativeDivider />
 
       <div className="page-banner">
         <div className="container mx-auto px-6">
@@ -24,26 +26,26 @@ export default async function DirectionPage({ params }: { params: Promise<{ lang
         </div>
       </div>
 
-      <main className="py-20 bg-white">
-        <div className="container mx-auto px-6 max-w-5xl">
+      <main className="py-12 md:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
 
           {/* Rector — featured card */}
-          <div className="flex flex-col md:flex-row gap-8 items-center p-8 rounded-2xl mb-14 border-2 border-[var(--gold)]"
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center p-6 md:p-8 rounded-2xl mb-10 md:mb-14 border-2 border-[var(--gold)]"
             style={{ boxShadow: "0 8px 40px rgba(139,26,26,0.10)" }}>
             <div className="relative flex-shrink-0 rounded-xl overflow-hidden border-[3px] border-[var(--gold)]"
-              style={{ width: 200, height: 240 }}>
+              style={{ width: 160, height: 200 }}>
               <Image src={rector.image} alt={rector.name} fill className="object-cover object-top" />
             </div>
-            <div>
+            <div className="text-center md:text-left">
               <p className="badge mb-2">{rector.role}</p>
-              <h2 className="text-3xl font-bold mb-3 text-[var(--red)]"
+              <h2 className="text-2xl md:text-3xl font-bold mb-3 text-[var(--red)]"
                 style={{ fontFamily: "Georgia, serif" }}>{rector.name}</h2>
-              <div className="w-12 h-[3px] rounded bg-[var(--gold)]" />
+              <div className="w-12 h-[3px] rounded bg-[var(--gold)] mx-auto md:mx-0" />
             </div>
           </div>
 
           {/* Consultors grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {consultors.map((member, index) => (
               <div key={index} className="card text-center overflow-hidden">
                 <div className="relative w-full" style={{ height: 200 }}>
@@ -55,7 +57,7 @@ export default async function DirectionPage({ params }: { params: Promise<{ lang
                   <p className="text-xs font-bold uppercase tracking-widest mb-1 text-[var(--gold)]">
                     {member.role}
                   </p>
-                  <h3 className="text-sm font-bold leading-snug text-[var(--dark)]"
+                  <h3 className="text-sm font-bold leading-snug text-[var(--gold)]"
                     style={{ fontFamily: "Georgia, serif" }}>
                     {member.name}
                   </h3>

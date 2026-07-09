@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/Footer";
 import { getDictionary } from "@/lib/getDictionary";
+import DecorativeDivider from "../../components/ui/DecorativeDivider";
 
 type Album = {
   id: number;
@@ -61,6 +62,7 @@ export default async function GalleriesPage({ params }: { params: Promise<{ lang
   return (
     <>
       <Header lang={lang} navigation={dict.navigation} />
+      <DecorativeDivider />
 
       <div className="page-banner">
         <div className="container mx-auto px-6">
@@ -70,17 +72,17 @@ export default async function GalleriesPage({ params }: { params: Promise<{ lang
         </div>
       </div>
 
-      <main className="py-16 bg-[var(--cream)]">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20">
+      <main className="py-12 md:py-16 bg-[var(--cream)]">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
 
           {/* ── Section header ── */}
           <div className="flex items-center gap-4 mb-10">
             <div className="w-1 h-8 bg-[var(--red)] rounded" />
             <div>
-              <p className="text-[10px] font-black tracking-[0.35em] uppercase text-[var(--gray)]">
+              <p className="text-[10px] font-black tracking-[0.35em] uppercase text-[var(--gold)]">
                 {lang === "fr" ? "Albums Photos" : "Photo Albums"}
               </p>
-              <p className="text-[var(--mid)] text-sm mt-0.5">
+              <p className="text-[var(--gold)] text-sm mt-0.5">
                 {lang === "fr" ? `${albums.length} albums · ${albums.reduce((a, b) => a + b.count, 0)} photos` : `${albums.length} albums · ${albums.reduce((a, b) => a + b.count, 0)} photos`}
               </p>
             </div>
@@ -105,7 +107,7 @@ export default async function GalleriesPage({ params }: { params: Promise<{ lang
                           strokeWidth="2" className="text-[var(--gold)]">
                           <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
                         </svg>
-                        <span className="text-[10px] font-bold tracking-wider uppercase text-[var(--gray)]">
+                        <span className="text-[10px] font-bold tracking-wider uppercase text-[var(--gold)]">
                           {album.date}
                         </span>
                       </div>
@@ -116,7 +118,7 @@ export default async function GalleriesPage({ params }: { params: Promise<{ lang
                           <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
                           <path d="M21 15l-5-5L5 21"/>
                         </svg>
-                        <span className="text-[10px] font-bold tracking-wider uppercase text-[var(--gray)]">
+                        <span className="text-[10px] font-bold tracking-wider uppercase text-[var(--gold)]">
                           {album.count} {lang === "fr" ? "photos" : "images"}
                         </span>
                       </div>
@@ -126,8 +128,7 @@ export default async function GalleriesPage({ params }: { params: Promise<{ lang
                 </div>
 
                 {/* Album grid — cover is large, rest are small */}
-                <div className="grid grid-cols-4 grid-rows-2 gap-2" style={{ height: "380px" }}>
-
+                <div className="grid grid-cols-4 grid-rows-2 gap-1 sm:gap-2" style={{ height: "220px", minHeight: "180px" }}>
                   {/* Cover — spans 2 cols × 2 rows */}
                   <div className="col-span-2 row-span-2 relative overflow-hidden group cursor-pointer rounded-lg">
                     <Image src={album.cover} alt={album.title} fill
@@ -176,10 +177,10 @@ export default async function GalleriesPage({ params }: { params: Promise<{ lang
             <div className="flex items-center gap-4 mb-8">
               <div className="w-1 h-8 bg-[var(--red)] rounded" />
               <div>
-                <p className="text-[10px] font-black tracking-[0.35em] uppercase text-[var(--gray)]">
+                <p className="text-[10px] font-black tracking-[0.35em] uppercase text-[var(--gold)]">
                   {lang === "fr" ? "Vidéos & Films" : "Videos & Movies"}
                 </p>
-                <p className="text-[var(--mid)] text-sm mt-0.5">
+                <p className="text-[var(--gold)] text-sm mt-0.5">
                   {lang === "fr" ? "Bientôt disponible" : "Coming soon"}
                 </p>
               </div>

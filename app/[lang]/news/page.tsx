@@ -2,6 +2,7 @@ import { Header } from "../../components/header";
 import { Footer } from "../../components/Footer";
 import { getDictionary } from "@/lib/getDictionary";
 import NewsFilter from "../../components/NewsFilter";
+import DecorativeDivider from "../../components/ui/DecorativeDivider";
 
 export default async function NewsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
@@ -11,6 +12,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
   return (
     <>
       <Header lang={lang} navigation={dict.navigation} />
+      <DecorativeDivider />
 
       <div className="page-banner">
         <div className="container mx-auto px-6">

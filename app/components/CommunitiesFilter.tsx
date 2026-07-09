@@ -47,12 +47,12 @@ export default function CommunitiesFilter({ communities, labels }: Props) {
   return (
     <div>
       {/* Filter tabs */}
-      <div className="flex flex-wrap gap-2 justify-center mb-12">
+      <div className="flex flex-wrap gap-2 justify-center mb-8 md:mb-12">
         {REGIONS.map((r) => (
           <button
             key={r}
             onClick={() => { setActive(r); setExpanded(null); }}
-            className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-200"
+            className="flex items-center gap-2 px-3 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200"
             style={
               active === r
                 ? { background: "var(--red)", color: "var(--white)", boxShadow: "0 4px 14px rgba(92,51,23,0.3)" }
@@ -75,7 +75,7 @@ export default function CommunitiesFilter({ communities, labels }: Props) {
       </div>
 
       {/* Cards grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {filtered.map((community, index) => {
           const isOpen = expanded === community.id;
           return (
@@ -106,7 +106,7 @@ export default function CommunitiesFilter({ communities, labels }: Props) {
                 </div>
               )}
 
-              <div className="p-6 flex flex-col flex-1">
+              <div className="p-4 sm:p-6 flex flex-col flex-1">
                 {/* Number badge (no image) */}
                 {!community.image && (
                   <div
@@ -169,7 +169,7 @@ export default function CommunitiesFilter({ communities, labels }: Props) {
                   <p className="text-sm font-bold uppercase tracking-widest mb-4" style={{ color: "var(--gold)" }}>
                     {labels.members}
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
                     {community.members.map((m, i) => (
                       <div
                         key={i}
@@ -184,7 +184,7 @@ export default function CommunitiesFilter({ communities, labels }: Props) {
                         </div>
                         <div>
                           <p className="text-base font-bold leading-tight" style={{ color: "var(--dark)" }}>{m.name}</p>
-                          <p className="text-sm mt-0.5 leading-snug" style={{ color: "var(--gray)" }}>{m.role}</p>
+                          <p className="text-sm mt-0.5 leading-snug" style={{ color: "var(--gold)" }}>{m.role}</p>
                         </div>
                       </div>
                     ))}

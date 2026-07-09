@@ -82,7 +82,7 @@ export default function HeroSlider({
   }, [next]);
 
   return (
-    <section className="relative w-full h-screen min-h-[600px] max-h-[900px] overflow-hidden">
+    <section className="relative w-full h-[70vh] sm:h-screen min-h-[500px] max-h-[900px] overflow-hidden">
       {/* Slides */}
       {slides.map((slide, i) => (
         <div
@@ -115,8 +115,8 @@ export default function HeroSlider({
       ))}
 
       {/* Content */}
-      <div className="absolute inset-0 z-10 flex flex-col justify-end pb-28 md:pb-32">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20">
+      <div className="absolute inset-0 z-10 flex flex-col justify-end pb-24 sm:pb-28 md:pb-32">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
           {slides.map((slide, i) => (
             <div
               key={i}
@@ -152,14 +152,14 @@ export default function HeroSlider({
 
               {/* Subtitle */}
               {slide.subtitle && (
-                <p className="text-white/75 font-light italic mb-6 max-w-xl"
+                <p className="text-white/80 font-light italic mb-6 max-w-xl"
                   style={{ fontSize: "clamp(0.9rem, 1.5vw, 1.1rem)" }}>
                   {slide.subtitle}
                 </p>
               )}
 
               {/* CTAs */}
-              <div className="flex flex-wrap gap-4 mt-6">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mt-6">
                 <Link
                   href={`/${lang}/identity`}
                   className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--gold)] text-[var(--dark)] text-[11px] font-bold uppercase tracking-[0.14em] rounded-full transition-all duration-300 hover:bg-[var(--gold-lt)] hover:shadow-xl"
@@ -220,29 +220,29 @@ export default function HeroSlider({
       </button>
 
       {/* Slide counter */}
-      <div className="absolute top-8 right-8 z-20 text-white/50 text-[11px] font-bold tracking-widest hidden md:block">
+      <div className="absolute top-8 right-8 z-20 text-[var(--gold)] text-[11px] font-bold tracking-widest hidden md:block">
         {String(current + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
       </div>
 
       {/* Stats bar */}
       <div className="absolute bottom-0 left-0 right-0 z-20 bg-[var(--dark)]/80 backdrop-blur-sm border-t border-white/10">
-        <div className="container mx-auto px-8 md:px-14 lg:px-20">
+        <div className="container mx-auto px-4 md:px-14 lg:px-20">
           <div className="grid grid-cols-3 divide-x divide-white/10">
             {[
               { num: "1890", label: statFounded, icon: "🏛" },
               { num: "111+", label: statMembers, icon: "👥" },
               { num: "3",    label: statCountries, icon: "🌍" },
             ].map((s, i) => (
-              <div key={i} className="py-3 px-4 md:px-8 flex items-center justify-center gap-3">
-                <span className="text-lg opacity-40">{s.icon}</span>
+              <div key={i} className="py-2 sm:py-3 px-2 sm:px-4 md:px-8 flex items-center justify-center gap-1.5 sm:gap-3">
+                <span className="text-base sm:text-lg opacity-40 hidden sm:block">{s.icon}</span>
                 <div className="text-left">
                   <span
-                    className="text-[1.2rem] md:text-[1.4rem] font-black text-[var(--gold)] block leading-none"
+                    className="text-base sm:text-[1.2rem] md:text-[1.4rem] font-black text-[var(--gold)] block leading-none"
                     style={{ fontFamily: "Georgia, serif" }}
                   >
                     {s.num}
                   </span>
-                  <span className="text-[8px] uppercase tracking-[0.15em] text-white/50">{s.label}</span>
+                  <span className="text-[7px] sm:text-[8px] uppercase tracking-[0.1em] sm:tracking-[0.15em]" style={{ color: "#ffffff" }}>{s.label}</span>
                 </div>
               </div>
             ))}

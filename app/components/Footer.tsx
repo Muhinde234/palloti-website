@@ -145,7 +145,7 @@ export const Footer = ({ lang, dict, navigation }: FooterProps) => {
             <div className="order-2 flex flex-col items-center gap-1">
               <p className="text-xs uppercase tracking-[0.3em] font-medium" style={{ color: "#ffffff" }}>Developed by</p>
               <a href="https://santech.rw" target="_blank" rel="noopener noreferrer"
-                className="text-white font-black text-sm tracking-widest hover:text-[var(--gold)] transition-colors">
+                className="font-black text-sm tracking-widest transition-colors" style={{ color: "var(--gold)" }}>
                 SANTECH
               </a>
             </div>

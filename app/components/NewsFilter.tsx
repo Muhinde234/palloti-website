@@ -74,7 +74,7 @@ export default function NewsFilter({ articles, readMore, lang, allPublicationsLa
         {/* Label */}
         <div className="flex items-center gap-3 mb-5">
           <div className="w-8 h-px bg-[var(--gold)]" />
-          <span className="text-xs font-black tracking-[0.35em] uppercase text-[var(--gray)]">
+          <span className="text-xs font-black tracking-[0.35em] uppercase text-[var(--gold)]">
             {lang === "fr" ? "Filtrer par catégorie" : "Filter by category"}
           </span>
           <div className="flex-1 h-px bg-[#e8e2d9]" />
@@ -126,7 +126,7 @@ export default function NewsFilter({ articles, readMore, lang, allPublicationsLa
         {/* Active filter indicator */}
         {activeKey !== "all" && (
           <div className="mt-4 flex items-center gap-2">
-            <span className="text-xs text-[var(--gray)]">
+            <span className="text-xs text-[var(--gold)]">
               {lang === "fr" ? "Résultats pour" : "Showing results for"}:
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[var(--red)]/10 text-[var(--red)] text-xs font-bold uppercase tracking-wider rounded-full">
@@ -137,7 +137,7 @@ export default function NewsFilter({ articles, readMore, lang, allPublicationsLa
                 </svg>
               </button>
             </span>
-            <span className="text-xs text-[var(--gray)]">
+            <span className="text-xs text-[var(--gold)]">
               — {filtered.length} {lang === "fr" ? "article(s)" : "article(s)"}
             </span>
           </div>
@@ -160,9 +160,9 @@ export default function NewsFilter({ articles, readMore, lang, allPublicationsLa
 
       {/* ── Featured (page 1, all filter only) ── */}
       {featured && (
-        <div className="group grid lg:grid-cols-2 gap-0 mb-14 bg-white overflow-hidden cursor-pointer"
+        <div className="group grid grid-cols-1 lg:grid-cols-2 gap-0 mb-10 md:mb-14 bg-white overflow-hidden cursor-pointer"
           style={{ border: "1px solid #e8e2d9", boxShadow: "0 8px 40px rgba(92,51,23,0.08)" }}>
-          <div className="relative overflow-hidden" style={{ minHeight: "360px" }}>
+          <div className="relative overflow-hidden" style={{ minHeight: "260px" }}>
             <Image src={featured.imageUrl} alt={featured.title} fill
               className="object-cover transition-transform duration-[2s] group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
@@ -170,7 +170,7 @@ export default function NewsFilter({ articles, readMore, lang, allPublicationsLa
               <span className="text-xs font-bold tracking-[0.2em] uppercase text-[var(--gold)]">{featured.date}</span>
             </div>
           </div>
-          <div className="p-8 md:p-10 flex flex-col justify-center">
+          <div className="p-6 md:p-8 lg:p-10 flex flex-col justify-center">
             <p className="text-xs font-bold tracking-[0.18em] uppercase text-[var(--gold)] mb-3">{featured.tags}</p>
             <h2 className="font-bold leading-snug text-[var(--dark)] group-hover:text-[var(--red)] transition-colors mb-4"
               style={{ fontFamily: "Georgia, serif", fontSize: "clamp(1.2rem, 2.5vw, 1.7rem)" }}>
@@ -222,15 +222,15 @@ export default function NewsFilter({ articles, readMore, lang, allPublicationsLa
               <div className="w-1 h-5 bg-[var(--red)] rounded" />
               <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--dark)]">{allPublicationsLabel}</h3>
             </div>
-            <span className="text-xs text-[var(--gray)] font-medium">
+            <span className="text-xs text-[var(--gold)] font-medium">
               {lang === "fr" ? `Page ${currentPage} sur ${totalPages}` : `Page ${currentPage} of ${totalPages}`}
             </span>
           </div>
           <div className="divide-y divide-[#f0ebe3]">
             {listArticles.map((article) => (
               <article key={article.id}
-                className="group flex gap-5 p-5 cursor-pointer hover:bg-[var(--cream)] transition-colors duration-200">
-                <div className="relative shrink-0 overflow-hidden rounded" style={{ width: 90, height: 70 }}>
+                className="group flex flex-col sm:flex-row gap-4 sm:gap-5 p-4 sm:p-5 cursor-pointer hover:bg-[var(--cream)] transition-colors duration-200">
+                <div className="relative shrink-0 overflow-hidden rounded mx-auto sm:mx-0" style={{ width: 90, height: 70 }}>
                   <Image src={article.imageUrl} alt={article.title} fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110" />
                 </div>
