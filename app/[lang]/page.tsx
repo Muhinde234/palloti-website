@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Header } from "../components/header";
 import { Footer } from "../components/Footer";
+import { Newsletter } from "../components/Newsletter";
 import { getDictionary } from "@/lib/getDictionary";
 import { FadeUp, StaggerContainer, StaggerItem, ParallaxSection } from "../components/motion";
 import HeroSlider from "../components/HeroSlider";
@@ -262,6 +263,13 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         </FadeUp>
       </section>
 
+      <Newsletter
+        title={dict.newsletter.title}
+        description={dict.newsletter.description}
+        placeholder={dict.newsletter.placeholder}
+        buttonText={dict.newsletter.button}
+        successMessage={dict.newsletter.success}
+      />
       <Footer lang={lang} dict={dict.footer} navigation={dict.navigation} />
     </>
   );

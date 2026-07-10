@@ -3,7 +3,7 @@
     "home": "Home",
     "identity": "Identity",
     "provincialDirection": "Provincial Government",
-    "communitiesAndWorks": "Communities & Works",
+    "communitiesAndWorks": "Communities & Apostolates",
     "news": "News",
     "galleries": "Galleries"
   },
@@ -378,5 +378,12 @@
     "phone": "+250 788 307 271 / +250 788 381 737",
     "email": "@sac-psf",
     "rights": "© 2026 SAC Holy Family Province. All rights reserved."
+  },
+  "newsletter": {
+    "title": "Stay Connected",
+    "description": "Receive our latest news and updates directly in your inbox.",
+    "placeholder": "Your email address",
+    "button": "Subscribe",
+    "success": "Thank you for subscribing!"
   }
 }

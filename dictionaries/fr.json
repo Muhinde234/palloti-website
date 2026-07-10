@@ -3,7 +3,7 @@
     "home": "Accueil",
     "identity": "Identité",
     "provincialDirection": "Gouvernement Provincial",
-    "communitiesAndWorks": "Communautés et Œuvres",
+    "communitiesAndWorks": "Communautés & Apostolats",
     "news": "Actualités",
     "galleries": "Galeries"
   },
@@ -378,5 +378,12 @@
     "phone": "+250 788 307 271 / +250 788 381 737",
     "email": "@sac-psf",
     "rights": "© 2026 Province Sainte Famille (SAC). Tous droits réservés."
+  },
+  "newsletter": {
+    "title": "Restez Connecté",
+    "description": "Recevez nos dernières nouvelles et mises à jour directement dans votre boîte mail.",
+    "placeholder": "Votre adresse e-mail",
+    "button": "S'abonner",
+    "success": "Merci pour votre abonnement !"
   }
 }

@@ -76,7 +76,7 @@ export default async function IdentityPage({ params }: { params: Promise<{ lang:
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
 
             {/* Image */}
-            <div className="relative rounded-xl overflow-hidden border-[3px] border-[var(--gold)] min-h-[400px]"
+            <div className="relative rounded-xl overflow-hidden border-[3px] border-[var(--gold)] min-h-[520px]"
               style={{ boxShadow: "0 12px 40px rgba(139,26,26,0.12)" }}>
               <Image src={charisma.image} alt="Charisma" fill className="object-cover" />
               <div className="absolute inset-0"
