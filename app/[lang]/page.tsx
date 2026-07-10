@@ -45,11 +45,11 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           </FadeUp>
 
           {/* ── Magazine spread: LEFT photo | RIGHT text ── */}
-          <div className="grid md:grid-cols-[340px_1fr] lg:grid-cols-[380px_1fr] gap-0 items-stretch">
+          <div className="grid md:grid-cols-[520px_1fr] lg:grid-cols-[620px_1fr] gap-0 items-stretch">
 
-            {/* LEFT — full portrait photo */}
-            <FadeUp className="relative">
-              <div className="sticky top-24 relative overflow-hidden" style={{ aspectRatio: "3/4" }}>
+            {/* LEFT — full portrait photo, stretches to match text height */}
+            <FadeUp className="relative min-h-[400px]">
+              <div className="absolute inset-0 overflow-hidden">
                 <Image src="/images/eugene.jpg" alt={dict.home.rectorName}
                   fill className="object-cover object-top" />
                 <div className="absolute inset-x-0 bottom-0 h-2/5"
@@ -128,8 +128,20 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
 
-        
-         
+          <FadeUp>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+              <div>
+                <span className="badge">{dict.home.newsBadge}</span>
+                <h2 className="section-title mt-2">{dict.home.newsTitle}</h2>
+                <div className="divider mt-4" />
+              </div>
+              <Link href={`/${lang}/news`}
+                className="group flex items-center gap-3 text-sm font-bold uppercase tracking-[0.18em] text-[var(--red)] hover:text-[var(--gold)] transition-colors shrink-0">
+                {dict.home.viewAllNews}
+                <span className="w-8 h-px bg-[var(--gold)] group-hover:w-12 transition-all duration-300" />
+              </Link>
+            </div>
+          </FadeUp>
 
           <div className="grid lg:grid-cols-[1fr_340px] xl:grid-cols-[1fr_380px] gap-8 lg:gap-10">
 
